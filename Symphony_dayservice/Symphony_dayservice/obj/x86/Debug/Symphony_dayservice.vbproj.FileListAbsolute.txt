@@ -1,0 +1,11 @@
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\bin\Debug\Symphony_dayservice.exe
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\bin\Debug\Symphony_dayservice.pdb
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\bin\Debug\Symphony_dayservice.xml
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.Resources.resources
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.vbproj.GenerateResource.Cache
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.exe
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.xml
+C:\Users\yoshi\AppData\Local\Temporary Projects\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.pdb
+C:\Users\yoshi\documents\visual studio 2010\Projects\Symphony_dayservice\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.exe
+C:\Users\yoshi\documents\visual studio 2010\Projects\Symphony_dayservice\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.xml
+C:\Users\yoshi\documents\visual studio 2010\Projects\Symphony_dayservice\Symphony_dayservice\obj\x86\Debug\Symphony_dayservice.pdb
