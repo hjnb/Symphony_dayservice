@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Symphony_dayservice
+</name>
+</assembly>
+<members>
+<member name="M:Symphony_dayservice.Util.EnableDoubleBuffering(System.Windows.Forms.Control)">
+	<summary>
+ コントロールのDoubleBufferedプロパティをTrueにする
+ </summary>
+	<param name="control">対象のコントロール</param>
+</member><member name="M:Symphony_dayservice.Util.checkDBNullValue(System.Object)">
+	<summary>
+ dgvのセルの値がNullかチェック、Nullの場合空文字を返す
+ </summary>
+	<param name="dgvCellValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Symphony_dayservice.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Symphony_dayservice.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Symphony_dayservice.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
