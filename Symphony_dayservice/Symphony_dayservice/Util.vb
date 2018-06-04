@@ -20,7 +20,7 @@ Public Class Util
     ''' <param name="dgvCellValue"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Private Shared Function checkDBNullValue(dgvCellValue As Object) As String
+    Public Shared Function checkDBNullValue(dgvCellValue As Object) As String
         Return If(IsDBNull(dgvCellValue), "", dgvCellValue)
     End Function
 End Class
