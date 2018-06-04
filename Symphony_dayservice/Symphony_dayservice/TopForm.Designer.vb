@@ -27,11 +27,11 @@ Partial Class TopForm
         Me.btnMeal = New System.Windows.Forms.Button()
         Me.btnUserRegist = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.timeLimitYmdBox = New ymdBox.ymdBox()
         Me.timeLimitList = New System.Windows.Forms.ListBox()
         Me.rbtnPreview = New System.Windows.Forms.RadioButton()
         Me.rbtnPrint = New System.Windows.Forms.RadioButton()
         Me.topPicture = New System.Windows.Forms.PictureBox()
-        Me.timeLimitYmdBox = New ymdBox.ymdBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.topPicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -91,6 +91,19 @@ Partial Class TopForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "期限切れ近し!!"
         '
+        'timeLimitYmdBox
+        '
+        Me.timeLimitYmdBox.boxType = 5
+        Me.timeLimitYmdBox.DateText = ""
+        Me.timeLimitYmdBox.EraLabelText = "H30"
+        Me.timeLimitYmdBox.EraText = ""
+        Me.timeLimitYmdBox.Location = New System.Drawing.Point(15, 15)
+        Me.timeLimitYmdBox.MonthLabelText = "06"
+        Me.timeLimitYmdBox.MonthText = ""
+        Me.timeLimitYmdBox.Name = "timeLimitYmdBox"
+        Me.timeLimitYmdBox.Size = New System.Drawing.Size(95, 40)
+        Me.timeLimitYmdBox.TabIndex = 11
+        '
         'timeLimitList
         '
         Me.timeLimitList.BackColor = System.Drawing.SystemColors.Control
@@ -130,19 +143,6 @@ Partial Class TopForm
         Me.topPicture.Size = New System.Drawing.Size(174, 232)
         Me.topPicture.TabIndex = 10
         Me.topPicture.TabStop = False
-        '
-        'timeLimitYmdBox
-        '
-        Me.timeLimitYmdBox.boxType = 5
-        Me.timeLimitYmdBox.DateText = ""
-        Me.timeLimitYmdBox.EraLabelText = "H30"
-        Me.timeLimitYmdBox.EraText = ""
-        Me.timeLimitYmdBox.Location = New System.Drawing.Point(15, 15)
-        Me.timeLimitYmdBox.MonthLabelText = "06"
-        Me.timeLimitYmdBox.MonthText = ""
-        Me.timeLimitYmdBox.Name = "timeLimitYmdBox"
-        Me.timeLimitYmdBox.Size = New System.Drawing.Size(95, 40)
-        Me.timeLimitYmdBox.TabIndex = 11
         '
         'TopForm
         '
