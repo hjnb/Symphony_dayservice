@@ -48,11 +48,11 @@
         Me.WindowState = FormWindowState.Maximized
         rbtnPreview.Checked = True
 
+        '期限切れリストのymdbox初期値設定(値が変更されるのでYmdTextChangeイベントが動きます)
+        timeLimitYmdBox.setADStr(Today.ToString("yyyy/MM/dd"))
+
         '画像表示
         topPicture.ImageLocation = imageFilePath
-
-        '期限切れリスト表示
-        settingTimeLimitList()
 
     End Sub
 
@@ -64,7 +64,7 @@
         '
     End Sub
 
-    Private Sub timeLimitYmdBox_YmTextChange(sender As Object, e As System.EventArgs) Handles timeLimitYmdBox.YmTextChange
+    Private Sub timeLimitYmdBox_YmdTextChange(sender As Object, e As System.EventArgs) Handles timeLimitYmdBox.YmdTextChange
         settingTimeLimitList()
     End Sub
 

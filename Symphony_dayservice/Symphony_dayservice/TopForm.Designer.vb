@@ -93,15 +93,15 @@ Partial Class TopForm
         '
         'timeLimitYmdBox
         '
-        Me.timeLimitYmdBox.boxType = 5
+        Me.timeLimitYmdBox.boxType = 7
         Me.timeLimitYmdBox.DateText = ""
         Me.timeLimitYmdBox.EraLabelText = "H30"
         Me.timeLimitYmdBox.EraText = ""
-        Me.timeLimitYmdBox.Location = New System.Drawing.Point(15, 15)
+        Me.timeLimitYmdBox.Location = New System.Drawing.Point(26, 15)
         Me.timeLimitYmdBox.MonthLabelText = "06"
         Me.timeLimitYmdBox.MonthText = ""
         Me.timeLimitYmdBox.Name = "timeLimitYmdBox"
-        Me.timeLimitYmdBox.Size = New System.Drawing.Size(95, 40)
+        Me.timeLimitYmdBox.Size = New System.Drawing.Size(120, 46)
         Me.timeLimitYmdBox.TabIndex = 11
         '
         'timeLimitList
@@ -109,7 +109,7 @@ Partial Class TopForm
         Me.timeLimitList.BackColor = System.Drawing.SystemColors.Control
         Me.timeLimitList.FormattingEnabled = True
         Me.timeLimitList.ItemHeight = 12
-        Me.timeLimitList.Location = New System.Drawing.Point(13, 60)
+        Me.timeLimitList.Location = New System.Drawing.Point(13, 64)
         Me.timeLimitList.Name = "timeLimitList"
         Me.timeLimitList.Size = New System.Drawing.Size(141, 124)
         Me.timeLimitList.TabIndex = 0
