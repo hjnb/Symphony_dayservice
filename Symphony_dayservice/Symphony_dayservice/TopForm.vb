@@ -2,7 +2,7 @@
 
     'データベースのパス
     Public dbFilePath As String = My.Application.Info.DirectoryPath & "\dayservice.mdb"
-    Public DB_Nurse2 As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & dbFilePath
+    Public DB_dayservice As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & dbFilePath
 
     'エクセルのパス
     Public excelFilePass As String = My.Application.Info.DirectoryPath & "\書式.xls"
