@@ -35,127 +35,77 @@ Partial Class 食事伝票
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.txtName1 = New System.Windows.Forms.TextBox()
         Me.txtNo1 = New System.Windows.Forms.TextBox()
-        Me.cmbYotei1 = New System.Windows.Forms.ComboBox()
-        Me.cmbKettei1 = New System.Windows.Forms.ComboBox()
         Me.txtBikou1 = New System.Windows.Forms.TextBox()
         Me.txtBikou2 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei2 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei2 = New System.Windows.Forms.ComboBox()
         Me.txtName2 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.txtBikou3 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei3 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei3 = New System.Windows.Forms.ComboBox()
         Me.txtName3 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.txtBikou4 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei4 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei4 = New System.Windows.Forms.ComboBox()
         Me.txtName4 = New System.Windows.Forms.TextBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.txtBikou5 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei5 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei5 = New System.Windows.Forms.ComboBox()
         Me.txtName5 = New System.Windows.Forms.TextBox()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.txtBikou6 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei6 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei6 = New System.Windows.Forms.ComboBox()
         Me.txtName6 = New System.Windows.Forms.TextBox()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.txtBikou7 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei7 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei7 = New System.Windows.Forms.ComboBox()
         Me.txtName7 = New System.Windows.Forms.TextBox()
         Me.TextBox23 = New System.Windows.Forms.TextBox()
         Me.txtBikou8 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei8 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei8 = New System.Windows.Forms.ComboBox()
         Me.txtName8 = New System.Windows.Forms.TextBox()
         Me.TextBox26 = New System.Windows.Forms.TextBox()
         Me.txtBikou9 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei9 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei9 = New System.Windows.Forms.ComboBox()
         Me.txtName9 = New System.Windows.Forms.TextBox()
         Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.txtBikou10 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei10 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei10 = New System.Windows.Forms.ComboBox()
         Me.txtName10 = New System.Windows.Forms.TextBox()
         Me.TextBox32 = New System.Windows.Forms.TextBox()
         Me.txtBikou11 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei11 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei11 = New System.Windows.Forms.ComboBox()
         Me.txtName11 = New System.Windows.Forms.TextBox()
         Me.TextBox35 = New System.Windows.Forms.TextBox()
         Me.txtBikou22 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei22 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei22 = New System.Windows.Forms.ComboBox()
         Me.txtName22 = New System.Windows.Forms.TextBox()
         Me.TextBox38 = New System.Windows.Forms.TextBox()
         Me.txtBikou21 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei21 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei21 = New System.Windows.Forms.ComboBox()
         Me.txtName21 = New System.Windows.Forms.TextBox()
         Me.TextBox41 = New System.Windows.Forms.TextBox()
         Me.txtBikou20 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei20 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei20 = New System.Windows.Forms.ComboBox()
         Me.txtName20 = New System.Windows.Forms.TextBox()
         Me.TextBox44 = New System.Windows.Forms.TextBox()
         Me.txtBikou19 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei19 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei19 = New System.Windows.Forms.ComboBox()
         Me.txtName19 = New System.Windows.Forms.TextBox()
         Me.TextBox47 = New System.Windows.Forms.TextBox()
         Me.txtBikou18 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei18 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei18 = New System.Windows.Forms.ComboBox()
         Me.txtName18 = New System.Windows.Forms.TextBox()
         Me.TextBox50 = New System.Windows.Forms.TextBox()
         Me.txtBikou17 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei17 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei17 = New System.Windows.Forms.ComboBox()
         Me.txtName17 = New System.Windows.Forms.TextBox()
         Me.TextBox53 = New System.Windows.Forms.TextBox()
         Me.txtBikou16 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei16 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei16 = New System.Windows.Forms.ComboBox()
         Me.txtName16 = New System.Windows.Forms.TextBox()
         Me.TextBox56 = New System.Windows.Forms.TextBox()
         Me.txtBikou15 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei15 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei15 = New System.Windows.Forms.ComboBox()
         Me.txtName15 = New System.Windows.Forms.TextBox()
         Me.TextBox59 = New System.Windows.Forms.TextBox()
         Me.txtBikou14 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei14 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei14 = New System.Windows.Forms.ComboBox()
         Me.txtName14 = New System.Windows.Forms.TextBox()
         Me.TextBox62 = New System.Windows.Forms.TextBox()
         Me.txtBikou13 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei13 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei13 = New System.Windows.Forms.ComboBox()
         Me.txtName13 = New System.Windows.Forms.TextBox()
         Me.TextBox65 = New System.Windows.Forms.TextBox()
         Me.txtBikou12 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei12 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei12 = New System.Windows.Forms.ComboBox()
         Me.txtName12 = New System.Windows.Forms.TextBox()
         Me.TextBox68 = New System.Windows.Forms.TextBox()
         Me.txtBikou25 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei25 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei25 = New System.Windows.Forms.ComboBox()
         Me.txtName25 = New System.Windows.Forms.TextBox()
         Me.TextBox71 = New System.Windows.Forms.TextBox()
         Me.txtBikou24 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei24 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei24 = New System.Windows.Forms.ComboBox()
         Me.txtName24 = New System.Windows.Forms.TextBox()
         Me.TextBox74 = New System.Windows.Forms.TextBox()
         Me.txtBikou23 = New System.Windows.Forms.TextBox()
-        Me.cmbKettei23 = New System.Windows.Forms.ComboBox()
-        Me.cmbYotei23 = New System.Windows.Forms.ComboBox()
         Me.txtName23 = New System.Windows.Forms.TextBox()
         Me.TextBox77 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -169,7 +119,60 @@ Partial Class 食事伝票
         Me.txtYoteiKei = New System.Windows.Forms.TextBox()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.btnKuria = New System.Windows.Forms.Button()
+        Me.cmbKettei25 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei25 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei24 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei24 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei23 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei23 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei22 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei22 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei21 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei21 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei20 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei20 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei19 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei19 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei18 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei18 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei17 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei17 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei16 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei16 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei15 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei15 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei14 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei14 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei13 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei13 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei12 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei12 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei11 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei11 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei10 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei10 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei9 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei9 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei8 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei8 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei7 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei7 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei6 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei6 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei5 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei5 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei4 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei4 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei3 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei3 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei2 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei2 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbKettei1 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.cmbYotei1 = New Symphony_dayservice.ReadOnlyComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'YmdBox1
@@ -301,31 +304,9 @@ Partial Class 食事伝票
         Me.txtNo1.Name = "txtNo1"
         Me.txtNo1.ReadOnly = True
         Me.txtNo1.Size = New System.Drawing.Size(38, 24)
-        Me.txtNo1.TabIndex = 111
+        Me.txtNo1.TabIndex = 501
         Me.txtNo1.Text = "1"
         Me.txtNo1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbYotei1
-        '
-        Me.cmbYotei1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbYotei1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei1.FormattingEnabled = True
-        Me.cmbYotei1.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei1.Location = New System.Drawing.Point(221, 82)
-        Me.cmbYotei1.Name = "cmbYotei1"
-        Me.cmbYotei1.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei1.TabIndex = 113
-        '
-        'cmbKettei1
-        '
-        Me.cmbKettei1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei1.FormattingEnabled = True
-        Me.cmbKettei1.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.cmbKettei1.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei1.Location = New System.Drawing.Point(308, 82)
-        Me.cmbKettei1.Name = "cmbKettei1"
-        Me.cmbKettei1.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei1.TabIndex = 114
         '
         'txtBikou1
         '
@@ -349,26 +330,6 @@ Partial Class 食事伝票
         Me.txtBikou2.TabIndex = 38
         Me.txtBikou2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'cmbKettei2
-        '
-        Me.cmbKettei2.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei2.FormattingEnabled = True
-        Me.cmbKettei2.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei2.Location = New System.Drawing.Point(308, 105)
-        Me.cmbKettei2.Name = "cmbKettei2"
-        Me.cmbKettei2.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei2.TabIndex = 119
-        '
-        'cmbYotei2
-        '
-        Me.cmbYotei2.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei2.FormattingEnabled = True
-        Me.cmbYotei2.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei2.Location = New System.Drawing.Point(221, 105)
-        Me.cmbYotei2.Name = "cmbYotei2"
-        Me.cmbYotei2.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei2.TabIndex = 118
-        '
         'txtName2
         '
         Me.txtName2.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
@@ -387,7 +348,7 @@ Partial Class 食事伝票
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox8.TabIndex = 116
+        Me.TextBox8.TabIndex = 502
         Me.TextBox8.Text = "2"
         Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -401,26 +362,6 @@ Partial Class 食事伝票
         Me.txtBikou3.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou3.TabIndex = 39
         Me.txtBikou3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei3
-        '
-        Me.cmbKettei3.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei3.FormattingEnabled = True
-        Me.cmbKettei3.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei3.Location = New System.Drawing.Point(308, 128)
-        Me.cmbKettei3.Name = "cmbKettei3"
-        Me.cmbKettei3.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei3.TabIndex = 124
-        '
-        'cmbYotei3
-        '
-        Me.cmbYotei3.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei3.FormattingEnabled = True
-        Me.cmbYotei3.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei3.Location = New System.Drawing.Point(221, 128)
-        Me.cmbYotei3.Name = "cmbYotei3"
-        Me.cmbYotei3.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei3.TabIndex = 123
         '
         'txtName3
         '
@@ -440,7 +381,7 @@ Partial Class 食事伝票
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox11.TabIndex = 121
+        Me.TextBox11.TabIndex = 503
         Me.TextBox11.Text = "3"
         Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -454,26 +395,6 @@ Partial Class 食事伝票
         Me.txtBikou4.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou4.TabIndex = 40
         Me.txtBikou4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei4
-        '
-        Me.cmbKettei4.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei4.FormattingEnabled = True
-        Me.cmbKettei4.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei4.Location = New System.Drawing.Point(308, 151)
-        Me.cmbKettei4.Name = "cmbKettei4"
-        Me.cmbKettei4.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei4.TabIndex = 129
-        '
-        'cmbYotei4
-        '
-        Me.cmbYotei4.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei4.FormattingEnabled = True
-        Me.cmbYotei4.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei4.Location = New System.Drawing.Point(221, 151)
-        Me.cmbYotei4.Name = "cmbYotei4"
-        Me.cmbYotei4.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei4.TabIndex = 128
         '
         'txtName4
         '
@@ -493,7 +414,7 @@ Partial Class 食事伝票
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.ReadOnly = True
         Me.TextBox14.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox14.TabIndex = 126
+        Me.TextBox14.TabIndex = 504
         Me.TextBox14.Text = "4"
         Me.TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -507,26 +428,6 @@ Partial Class 食事伝票
         Me.txtBikou5.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou5.TabIndex = 41
         Me.txtBikou5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei5
-        '
-        Me.cmbKettei5.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei5.FormattingEnabled = True
-        Me.cmbKettei5.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei5.Location = New System.Drawing.Point(308, 174)
-        Me.cmbKettei5.Name = "cmbKettei5"
-        Me.cmbKettei5.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei5.TabIndex = 134
-        '
-        'cmbYotei5
-        '
-        Me.cmbYotei5.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei5.FormattingEnabled = True
-        Me.cmbYotei5.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei5.Location = New System.Drawing.Point(221, 174)
-        Me.cmbYotei5.Name = "cmbYotei5"
-        Me.cmbYotei5.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei5.TabIndex = 133
         '
         'txtName5
         '
@@ -546,7 +447,7 @@ Partial Class 食事伝票
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.ReadOnly = True
         Me.TextBox17.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox17.TabIndex = 111
+        Me.TextBox17.TabIndex = 505
         Me.TextBox17.Text = "5"
         Me.TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -560,26 +461,6 @@ Partial Class 食事伝票
         Me.txtBikou6.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou6.TabIndex = 42
         Me.txtBikou6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei6
-        '
-        Me.cmbKettei6.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei6.FormattingEnabled = True
-        Me.cmbKettei6.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei6.Location = New System.Drawing.Point(308, 197)
-        Me.cmbKettei6.Name = "cmbKettei6"
-        Me.cmbKettei6.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei6.TabIndex = 139
-        '
-        'cmbYotei6
-        '
-        Me.cmbYotei6.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei6.FormattingEnabled = True
-        Me.cmbYotei6.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei6.Location = New System.Drawing.Point(221, 197)
-        Me.cmbYotei6.Name = "cmbYotei6"
-        Me.cmbYotei6.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei6.TabIndex = 138
         '
         'txtName6
         '
@@ -599,7 +480,7 @@ Partial Class 食事伝票
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.ReadOnly = True
         Me.TextBox20.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox20.TabIndex = 111
+        Me.TextBox20.TabIndex = 506
         Me.TextBox20.Text = "6"
         Me.TextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -613,26 +494,6 @@ Partial Class 食事伝票
         Me.txtBikou7.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou7.TabIndex = 43
         Me.txtBikou7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei7
-        '
-        Me.cmbKettei7.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei7.FormattingEnabled = True
-        Me.cmbKettei7.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei7.Location = New System.Drawing.Point(308, 220)
-        Me.cmbKettei7.Name = "cmbKettei7"
-        Me.cmbKettei7.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei7.TabIndex = 144
-        '
-        'cmbYotei7
-        '
-        Me.cmbYotei7.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei7.FormattingEnabled = True
-        Me.cmbYotei7.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei7.Location = New System.Drawing.Point(221, 220)
-        Me.cmbYotei7.Name = "cmbYotei7"
-        Me.cmbYotei7.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei7.TabIndex = 143
         '
         'txtName7
         '
@@ -652,7 +513,7 @@ Partial Class 食事伝票
         Me.TextBox23.Name = "TextBox23"
         Me.TextBox23.ReadOnly = True
         Me.TextBox23.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox23.TabIndex = 111
+        Me.TextBox23.TabIndex = 507
         Me.TextBox23.Text = "7"
         Me.TextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -666,26 +527,6 @@ Partial Class 食事伝票
         Me.txtBikou8.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou8.TabIndex = 44
         Me.txtBikou8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei8
-        '
-        Me.cmbKettei8.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei8.FormattingEnabled = True
-        Me.cmbKettei8.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei8.Location = New System.Drawing.Point(308, 243)
-        Me.cmbKettei8.Name = "cmbKettei8"
-        Me.cmbKettei8.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei8.TabIndex = 149
-        '
-        'cmbYotei8
-        '
-        Me.cmbYotei8.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei8.FormattingEnabled = True
-        Me.cmbYotei8.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei8.Location = New System.Drawing.Point(221, 243)
-        Me.cmbYotei8.Name = "cmbYotei8"
-        Me.cmbYotei8.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei8.TabIndex = 111
         '
         'txtName8
         '
@@ -705,7 +546,7 @@ Partial Class 食事伝票
         Me.TextBox26.Name = "TextBox26"
         Me.TextBox26.ReadOnly = True
         Me.TextBox26.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox26.TabIndex = 111
+        Me.TextBox26.TabIndex = 508
         Me.TextBox26.Text = "8"
         Me.TextBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -719,26 +560,6 @@ Partial Class 食事伝票
         Me.txtBikou9.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou9.TabIndex = 45
         Me.txtBikou9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei9
-        '
-        Me.cmbKettei9.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei9.FormattingEnabled = True
-        Me.cmbKettei9.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei9.Location = New System.Drawing.Point(308, 266)
-        Me.cmbKettei9.Name = "cmbKettei9"
-        Me.cmbKettei9.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei9.TabIndex = 154
-        '
-        'cmbYotei9
-        '
-        Me.cmbYotei9.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei9.FormattingEnabled = True
-        Me.cmbYotei9.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei9.Location = New System.Drawing.Point(221, 266)
-        Me.cmbYotei9.Name = "cmbYotei9"
-        Me.cmbYotei9.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei9.TabIndex = 153
         '
         'txtName9
         '
@@ -758,7 +579,7 @@ Partial Class 食事伝票
         Me.TextBox29.Name = "TextBox29"
         Me.TextBox29.ReadOnly = True
         Me.TextBox29.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox29.TabIndex = 111
+        Me.TextBox29.TabIndex = 509
         Me.TextBox29.Text = "9"
         Me.TextBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -772,26 +593,6 @@ Partial Class 食事伝票
         Me.txtBikou10.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou10.TabIndex = 46
         Me.txtBikou10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei10
-        '
-        Me.cmbKettei10.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei10.FormattingEnabled = True
-        Me.cmbKettei10.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei10.Location = New System.Drawing.Point(308, 289)
-        Me.cmbKettei10.Name = "cmbKettei10"
-        Me.cmbKettei10.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei10.TabIndex = 159
-        '
-        'cmbYotei10
-        '
-        Me.cmbYotei10.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei10.FormattingEnabled = True
-        Me.cmbYotei10.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei10.Location = New System.Drawing.Point(221, 289)
-        Me.cmbYotei10.Name = "cmbYotei10"
-        Me.cmbYotei10.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei10.TabIndex = 158
         '
         'txtName10
         '
@@ -811,7 +612,7 @@ Partial Class 食事伝票
         Me.TextBox32.Name = "TextBox32"
         Me.TextBox32.ReadOnly = True
         Me.TextBox32.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox32.TabIndex = 111
+        Me.TextBox32.TabIndex = 510
         Me.TextBox32.Text = "10"
         Me.TextBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -825,26 +626,6 @@ Partial Class 食事伝票
         Me.txtBikou11.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou11.TabIndex = 47
         Me.txtBikou11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei11
-        '
-        Me.cmbKettei11.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei11.FormattingEnabled = True
-        Me.cmbKettei11.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei11.Location = New System.Drawing.Point(308, 312)
-        Me.cmbKettei11.Name = "cmbKettei11"
-        Me.cmbKettei11.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei11.TabIndex = 164
-        '
-        'cmbYotei11
-        '
-        Me.cmbYotei11.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei11.FormattingEnabled = True
-        Me.cmbYotei11.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei11.Location = New System.Drawing.Point(221, 312)
-        Me.cmbYotei11.Name = "cmbYotei11"
-        Me.cmbYotei11.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei11.TabIndex = 163
         '
         'txtName11
         '
@@ -864,7 +645,7 @@ Partial Class 食事伝票
         Me.TextBox35.Name = "TextBox35"
         Me.TextBox35.ReadOnly = True
         Me.TextBox35.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox35.TabIndex = 111
+        Me.TextBox35.TabIndex = 511
         Me.TextBox35.Text = "11"
         Me.TextBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -878,26 +659,6 @@ Partial Class 食事伝票
         Me.txtBikou22.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou22.TabIndex = 58
         Me.txtBikou22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei22
-        '
-        Me.cmbKettei22.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei22.FormattingEnabled = True
-        Me.cmbKettei22.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei22.Location = New System.Drawing.Point(308, 565)
-        Me.cmbKettei22.Name = "cmbKettei22"
-        Me.cmbKettei22.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei22.TabIndex = 119
-        '
-        'cmbYotei22
-        '
-        Me.cmbYotei22.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei22.FormattingEnabled = True
-        Me.cmbYotei22.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei22.Location = New System.Drawing.Point(221, 565)
-        Me.cmbYotei22.Name = "cmbYotei22"
-        Me.cmbYotei22.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei22.TabIndex = 118
         '
         'txtName22
         '
@@ -917,7 +678,7 @@ Partial Class 食事伝票
         Me.TextBox38.Name = "TextBox38"
         Me.TextBox38.ReadOnly = True
         Me.TextBox38.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox38.TabIndex = 111
+        Me.TextBox38.TabIndex = 522
         Me.TextBox38.Text = "22"
         Me.TextBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -931,26 +692,6 @@ Partial Class 食事伝票
         Me.txtBikou21.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou21.TabIndex = 57
         Me.txtBikou21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei21
-        '
-        Me.cmbKettei21.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei21.FormattingEnabled = True
-        Me.cmbKettei21.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei21.Location = New System.Drawing.Point(308, 542)
-        Me.cmbKettei21.Name = "cmbKettei21"
-        Me.cmbKettei21.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei21.TabIndex = 114
-        '
-        'cmbYotei21
-        '
-        Me.cmbYotei21.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei21.FormattingEnabled = True
-        Me.cmbYotei21.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei21.Location = New System.Drawing.Point(221, 542)
-        Me.cmbYotei21.Name = "cmbYotei21"
-        Me.cmbYotei21.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei21.TabIndex = 113
         '
         'txtName21
         '
@@ -970,7 +711,7 @@ Partial Class 食事伝票
         Me.TextBox41.Name = "TextBox41"
         Me.TextBox41.ReadOnly = True
         Me.TextBox41.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox41.TabIndex = 111
+        Me.TextBox41.TabIndex = 521
         Me.TextBox41.Text = "21"
         Me.TextBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -984,26 +725,6 @@ Partial Class 食事伝票
         Me.txtBikou20.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou20.TabIndex = 56
         Me.txtBikou20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei20
-        '
-        Me.cmbKettei20.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei20.FormattingEnabled = True
-        Me.cmbKettei20.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei20.Location = New System.Drawing.Point(308, 519)
-        Me.cmbKettei20.Name = "cmbKettei20"
-        Me.cmbKettei20.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei20.TabIndex = 109
-        '
-        'cmbYotei20
-        '
-        Me.cmbYotei20.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei20.FormattingEnabled = True
-        Me.cmbYotei20.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei20.Location = New System.Drawing.Point(221, 519)
-        Me.cmbYotei20.Name = "cmbYotei20"
-        Me.cmbYotei20.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei20.TabIndex = 108
         '
         'txtName20
         '
@@ -1023,7 +744,7 @@ Partial Class 食事伝票
         Me.TextBox44.Name = "TextBox44"
         Me.TextBox44.ReadOnly = True
         Me.TextBox44.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox44.TabIndex = 111
+        Me.TextBox44.TabIndex = 520
         Me.TextBox44.Text = "20"
         Me.TextBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1037,26 +758,6 @@ Partial Class 食事伝票
         Me.txtBikou19.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou19.TabIndex = 55
         Me.txtBikou19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei19
-        '
-        Me.cmbKettei19.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei19.FormattingEnabled = True
-        Me.cmbKettei19.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei19.Location = New System.Drawing.Point(308, 496)
-        Me.cmbKettei19.Name = "cmbKettei19"
-        Me.cmbKettei19.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei19.TabIndex = 104
-        '
-        'cmbYotei19
-        '
-        Me.cmbYotei19.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei19.FormattingEnabled = True
-        Me.cmbYotei19.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei19.Location = New System.Drawing.Point(221, 496)
-        Me.cmbYotei19.Name = "cmbYotei19"
-        Me.cmbYotei19.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei19.TabIndex = 103
         '
         'txtName19
         '
@@ -1076,7 +777,7 @@ Partial Class 食事伝票
         Me.TextBox47.Name = "TextBox47"
         Me.TextBox47.ReadOnly = True
         Me.TextBox47.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox47.TabIndex = 111
+        Me.TextBox47.TabIndex = 519
         Me.TextBox47.Text = "19"
         Me.TextBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1090,26 +791,6 @@ Partial Class 食事伝票
         Me.txtBikou18.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou18.TabIndex = 54
         Me.txtBikou18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei18
-        '
-        Me.cmbKettei18.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei18.FormattingEnabled = True
-        Me.cmbKettei18.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei18.Location = New System.Drawing.Point(308, 473)
-        Me.cmbKettei18.Name = "cmbKettei18"
-        Me.cmbKettei18.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei18.TabIndex = 199
-        '
-        'cmbYotei18
-        '
-        Me.cmbYotei18.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei18.FormattingEnabled = True
-        Me.cmbYotei18.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei18.Location = New System.Drawing.Point(221, 473)
-        Me.cmbYotei18.Name = "cmbYotei18"
-        Me.cmbYotei18.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei18.TabIndex = 198
         '
         'txtName18
         '
@@ -1129,7 +810,7 @@ Partial Class 食事伝票
         Me.TextBox50.Name = "TextBox50"
         Me.TextBox50.ReadOnly = True
         Me.TextBox50.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox50.TabIndex = 111
+        Me.TextBox50.TabIndex = 518
         Me.TextBox50.Text = "18"
         Me.TextBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1143,26 +824,6 @@ Partial Class 食事伝票
         Me.txtBikou17.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou17.TabIndex = 53
         Me.txtBikou17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei17
-        '
-        Me.cmbKettei17.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei17.FormattingEnabled = True
-        Me.cmbKettei17.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei17.Location = New System.Drawing.Point(308, 450)
-        Me.cmbKettei17.Name = "cmbKettei17"
-        Me.cmbKettei17.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei17.TabIndex = 194
-        '
-        'cmbYotei17
-        '
-        Me.cmbYotei17.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei17.FormattingEnabled = True
-        Me.cmbYotei17.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei17.Location = New System.Drawing.Point(221, 450)
-        Me.cmbYotei17.Name = "cmbYotei17"
-        Me.cmbYotei17.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei17.TabIndex = 193
         '
         'txtName17
         '
@@ -1182,7 +843,7 @@ Partial Class 食事伝票
         Me.TextBox53.Name = "TextBox53"
         Me.TextBox53.ReadOnly = True
         Me.TextBox53.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox53.TabIndex = 111
+        Me.TextBox53.TabIndex = 517
         Me.TextBox53.Text = "17"
         Me.TextBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1196,26 +857,6 @@ Partial Class 食事伝票
         Me.txtBikou16.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou16.TabIndex = 52
         Me.txtBikou16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei16
-        '
-        Me.cmbKettei16.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei16.FormattingEnabled = True
-        Me.cmbKettei16.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei16.Location = New System.Drawing.Point(308, 427)
-        Me.cmbKettei16.Name = "cmbKettei16"
-        Me.cmbKettei16.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei16.TabIndex = 189
-        '
-        'cmbYotei16
-        '
-        Me.cmbYotei16.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei16.FormattingEnabled = True
-        Me.cmbYotei16.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei16.Location = New System.Drawing.Point(221, 427)
-        Me.cmbYotei16.Name = "cmbYotei16"
-        Me.cmbYotei16.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei16.TabIndex = 188
         '
         'txtName16
         '
@@ -1235,7 +876,7 @@ Partial Class 食事伝票
         Me.TextBox56.Name = "TextBox56"
         Me.TextBox56.ReadOnly = True
         Me.TextBox56.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox56.TabIndex = 111
+        Me.TextBox56.TabIndex = 516
         Me.TextBox56.Text = "16"
         Me.TextBox56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1249,26 +890,6 @@ Partial Class 食事伝票
         Me.txtBikou15.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou15.TabIndex = 51
         Me.txtBikou15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei15
-        '
-        Me.cmbKettei15.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei15.FormattingEnabled = True
-        Me.cmbKettei15.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei15.Location = New System.Drawing.Point(308, 404)
-        Me.cmbKettei15.Name = "cmbKettei15"
-        Me.cmbKettei15.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei15.TabIndex = 184
-        '
-        'cmbYotei15
-        '
-        Me.cmbYotei15.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei15.FormattingEnabled = True
-        Me.cmbYotei15.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei15.Location = New System.Drawing.Point(221, 404)
-        Me.cmbYotei15.Name = "cmbYotei15"
-        Me.cmbYotei15.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei15.TabIndex = 183
         '
         'txtName15
         '
@@ -1288,7 +909,7 @@ Partial Class 食事伝票
         Me.TextBox59.Name = "TextBox59"
         Me.TextBox59.ReadOnly = True
         Me.TextBox59.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox59.TabIndex = 111
+        Me.TextBox59.TabIndex = 515
         Me.TextBox59.Text = "15"
         Me.TextBox59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1302,26 +923,6 @@ Partial Class 食事伝票
         Me.txtBikou14.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou14.TabIndex = 50
         Me.txtBikou14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei14
-        '
-        Me.cmbKettei14.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei14.FormattingEnabled = True
-        Me.cmbKettei14.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei14.Location = New System.Drawing.Point(308, 381)
-        Me.cmbKettei14.Name = "cmbKettei14"
-        Me.cmbKettei14.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei14.TabIndex = 179
-        '
-        'cmbYotei14
-        '
-        Me.cmbYotei14.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei14.FormattingEnabled = True
-        Me.cmbYotei14.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei14.Location = New System.Drawing.Point(221, 381)
-        Me.cmbYotei14.Name = "cmbYotei14"
-        Me.cmbYotei14.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei14.TabIndex = 178
         '
         'txtName14
         '
@@ -1341,7 +942,7 @@ Partial Class 食事伝票
         Me.TextBox62.Name = "TextBox62"
         Me.TextBox62.ReadOnly = True
         Me.TextBox62.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox62.TabIndex = 111
+        Me.TextBox62.TabIndex = 514
         Me.TextBox62.Text = "14"
         Me.TextBox62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1355,26 +956,6 @@ Partial Class 食事伝票
         Me.txtBikou13.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou13.TabIndex = 49
         Me.txtBikou13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei13
-        '
-        Me.cmbKettei13.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei13.FormattingEnabled = True
-        Me.cmbKettei13.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei13.Location = New System.Drawing.Point(308, 358)
-        Me.cmbKettei13.Name = "cmbKettei13"
-        Me.cmbKettei13.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei13.TabIndex = 174
-        '
-        'cmbYotei13
-        '
-        Me.cmbYotei13.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei13.FormattingEnabled = True
-        Me.cmbYotei13.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei13.Location = New System.Drawing.Point(221, 358)
-        Me.cmbYotei13.Name = "cmbYotei13"
-        Me.cmbYotei13.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei13.TabIndex = 173
         '
         'txtName13
         '
@@ -1394,7 +975,7 @@ Partial Class 食事伝票
         Me.TextBox65.Name = "TextBox65"
         Me.TextBox65.ReadOnly = True
         Me.TextBox65.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox65.TabIndex = 111
+        Me.TextBox65.TabIndex = 513
         Me.TextBox65.Text = "13"
         Me.TextBox65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1408,26 +989,6 @@ Partial Class 食事伝票
         Me.txtBikou12.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou12.TabIndex = 48
         Me.txtBikou12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei12
-        '
-        Me.cmbKettei12.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei12.FormattingEnabled = True
-        Me.cmbKettei12.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei12.Location = New System.Drawing.Point(308, 335)
-        Me.cmbKettei12.Name = "cmbKettei12"
-        Me.cmbKettei12.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei12.TabIndex = 169
-        '
-        'cmbYotei12
-        '
-        Me.cmbYotei12.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei12.FormattingEnabled = True
-        Me.cmbYotei12.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei12.Location = New System.Drawing.Point(221, 335)
-        Me.cmbYotei12.Name = "cmbYotei12"
-        Me.cmbYotei12.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei12.TabIndex = 168
         '
         'txtName12
         '
@@ -1447,7 +1008,7 @@ Partial Class 食事伝票
         Me.TextBox68.Name = "TextBox68"
         Me.TextBox68.ReadOnly = True
         Me.TextBox68.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox68.TabIndex = 111
+        Me.TextBox68.TabIndex = 512
         Me.TextBox68.Text = "12"
         Me.TextBox68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1461,26 +1022,6 @@ Partial Class 食事伝票
         Me.txtBikou25.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou25.TabIndex = 61
         Me.txtBikou25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei25
-        '
-        Me.cmbKettei25.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei25.FormattingEnabled = True
-        Me.cmbKettei25.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei25.Location = New System.Drawing.Point(308, 634)
-        Me.cmbKettei25.Name = "cmbKettei25"
-        Me.cmbKettei25.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei25.TabIndex = 134
-        '
-        'cmbYotei25
-        '
-        Me.cmbYotei25.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei25.FormattingEnabled = True
-        Me.cmbYotei25.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei25.Location = New System.Drawing.Point(221, 634)
-        Me.cmbYotei25.Name = "cmbYotei25"
-        Me.cmbYotei25.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei25.TabIndex = 133
         '
         'txtName25
         '
@@ -1500,7 +1041,7 @@ Partial Class 食事伝票
         Me.TextBox71.Name = "TextBox71"
         Me.TextBox71.ReadOnly = True
         Me.TextBox71.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox71.TabIndex = 111
+        Me.TextBox71.TabIndex = 525
         Me.TextBox71.Text = "25"
         Me.TextBox71.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1514,26 +1055,6 @@ Partial Class 食事伝票
         Me.txtBikou24.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou24.TabIndex = 60
         Me.txtBikou24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei24
-        '
-        Me.cmbKettei24.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei24.FormattingEnabled = True
-        Me.cmbKettei24.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei24.Location = New System.Drawing.Point(308, 611)
-        Me.cmbKettei24.Name = "cmbKettei24"
-        Me.cmbKettei24.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei24.TabIndex = 129
-        '
-        'cmbYotei24
-        '
-        Me.cmbYotei24.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei24.FormattingEnabled = True
-        Me.cmbYotei24.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei24.Location = New System.Drawing.Point(221, 611)
-        Me.cmbYotei24.Name = "cmbYotei24"
-        Me.cmbYotei24.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei24.TabIndex = 128
         '
         'txtName24
         '
@@ -1553,7 +1074,7 @@ Partial Class 食事伝票
         Me.TextBox74.Name = "TextBox74"
         Me.TextBox74.ReadOnly = True
         Me.TextBox74.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox74.TabIndex = 111
+        Me.TextBox74.TabIndex = 524
         Me.TextBox74.Text = "24"
         Me.TextBox74.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1567,26 +1088,6 @@ Partial Class 食事伝票
         Me.txtBikou23.Size = New System.Drawing.Size(98, 24)
         Me.txtBikou23.TabIndex = 59
         Me.txtBikou23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cmbKettei23
-        '
-        Me.cmbKettei23.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbKettei23.FormattingEnabled = True
-        Me.cmbKettei23.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbKettei23.Location = New System.Drawing.Point(308, 588)
-        Me.cmbKettei23.Name = "cmbKettei23"
-        Me.cmbKettei23.Size = New System.Drawing.Size(88, 24)
-        Me.cmbKettei23.TabIndex = 124
-        '
-        'cmbYotei23
-        '
-        Me.cmbYotei23.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmbYotei23.FormattingEnabled = True
-        Me.cmbYotei23.Items.AddRange(New Object() {"　　　○", "　　　✕"})
-        Me.cmbYotei23.Location = New System.Drawing.Point(221, 588)
-        Me.cmbYotei23.Name = "cmbYotei23"
-        Me.cmbYotei23.Size = New System.Drawing.Size(88, 24)
-        Me.cmbYotei23.TabIndex = 123
         '
         'txtName23
         '
@@ -1606,123 +1107,645 @@ Partial Class 食事伝票
         Me.TextBox77.Name = "TextBox77"
         Me.TextBox77.ReadOnly = True
         Me.TextBox77.Size = New System.Drawing.Size(38, 24)
-        Me.TextBox77.TabIndex = 111
+        Me.TextBox77.TabIndex = 523
         Me.TextBox77.Text = "23"
         Me.TextBox77.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(651, 66)
+        Me.DataGridView1.Location = New System.Drawing.Point(626, 8)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(435, 374)
         Me.DataGridView1.TabIndex = 136
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(395, 673)
+        Me.TextBox6.Location = New System.Drawing.Point(395, 657)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(98, 19)
-        Me.TextBox6.TabIndex = 205
+        Me.TextBox6.TabIndex = 532
         Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(308, 673)
+        Me.TextBox7.Location = New System.Drawing.Point(308, 657)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(88, 19)
-        Me.TextBox7.TabIndex = 204
+        Me.TextBox7.TabIndex = 533
         Me.TextBox7.Text = "決定合計"
         Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(221, 673)
+        Me.TextBox9.Location = New System.Drawing.Point(221, 657)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(88, 19)
-        Me.TextBox9.TabIndex = 203
+        Me.TextBox9.TabIndex = 534
         Me.TextBox9.Text = "予定合計"
         Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(91, 673)
+        Me.TextBox10.Location = New System.Drawing.Point(91, 657)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(131, 19)
-        Me.TextBox10.TabIndex = 202
+        Me.TextBox10.TabIndex = 535
         Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox12
         '
         Me.TextBox12.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(54, 673)
+        Me.TextBox12.Location = New System.Drawing.Point(54, 657)
         Me.TextBox12.Multiline = True
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.ReadOnly = True
         Me.TextBox12.Size = New System.Drawing.Size(38, 19)
-        Me.TextBox12.TabIndex = 201
+        Me.TextBox12.TabIndex = 526
         Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(395, 691)
+        Me.TextBox13.Location = New System.Drawing.Point(395, 675)
         Me.TextBox13.Multiline = True
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.ReadOnly = True
         Me.TextBox13.Size = New System.Drawing.Size(98, 27)
-        Me.TextBox13.TabIndex = 210
+        Me.TextBox13.TabIndex = 531
         Me.TextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtKetteikei
         '
-        Me.txtKetteikei.Location = New System.Drawing.Point(308, 691)
+        Me.txtKetteikei.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txtKetteikei.Location = New System.Drawing.Point(308, 675)
         Me.txtKetteikei.Multiline = True
         Me.txtKetteikei.Name = "txtKetteikei"
         Me.txtKetteikei.ReadOnly = True
         Me.txtKetteikei.Size = New System.Drawing.Size(88, 27)
-        Me.txtKetteikei.TabIndex = 209
+        Me.txtKetteikei.TabIndex = 530
+        Me.txtKetteikei.Text = "0"
         Me.txtKetteikei.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtYoteiKei
         '
-        Me.txtYoteiKei.Location = New System.Drawing.Point(221, 691)
+        Me.txtYoteiKei.Font = New System.Drawing.Font("MS UI Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txtYoteiKei.Location = New System.Drawing.Point(221, 675)
         Me.txtYoteiKei.Multiline = True
         Me.txtYoteiKei.Name = "txtYoteiKei"
         Me.txtYoteiKei.ReadOnly = True
         Me.txtYoteiKei.Size = New System.Drawing.Size(88, 27)
-        Me.txtYoteiKei.TabIndex = 208
+        Me.txtYoteiKei.TabIndex = 529
+        Me.txtYoteiKei.Text = "0"
         Me.txtYoteiKei.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox18
         '
-        Me.TextBox18.Location = New System.Drawing.Point(91, 691)
+        Me.TextBox18.Location = New System.Drawing.Point(91, 675)
         Me.TextBox18.Multiline = True
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.ReadOnly = True
         Me.TextBox18.Size = New System.Drawing.Size(131, 27)
-        Me.TextBox18.TabIndex = 207
+        Me.TextBox18.TabIndex = 528
         Me.TextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox19
         '
         Me.TextBox19.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox19.Location = New System.Drawing.Point(54, 691)
+        Me.TextBox19.Location = New System.Drawing.Point(54, 675)
         Me.TextBox19.Multiline = True
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.ReadOnly = True
         Me.TextBox19.Size = New System.Drawing.Size(38, 27)
-        Me.TextBox19.TabIndex = 206
+        Me.TextBox19.TabIndex = 527
         Me.TextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(611, 398)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(533, 331)
+        Me.DataGridView2.TabIndex = 536
+        '
+        'btnKuria
+        '
+        Me.btnKuria.Location = New System.Drawing.Point(527, 122)
+        Me.btnKuria.Name = "btnKuria"
+        Me.btnKuria.Size = New System.Drawing.Size(75, 43)
+        Me.btnKuria.TabIndex = 537
+        Me.btnKuria.Text = "クリア"
+        Me.btnKuria.UseVisualStyleBackColor = True
+        '
+        'cmbKettei25
+        '
+        Me.cmbKettei25.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei25.FormattingEnabled = True
+        Me.cmbKettei25.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei25.Location = New System.Drawing.Point(308, 634)
+        Me.cmbKettei25.Name = "cmbKettei25"
+        Me.cmbKettei25.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei25.TabIndex = 225
+        '
+        'cmbYotei25
+        '
+        Me.cmbYotei25.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei25.FormattingEnabled = True
+        Me.cmbYotei25.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei25.Location = New System.Drawing.Point(221, 634)
+        Me.cmbYotei25.Name = "cmbYotei25"
+        Me.cmbYotei25.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei25.TabIndex = 125
+        '
+        'cmbKettei24
+        '
+        Me.cmbKettei24.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei24.FormattingEnabled = True
+        Me.cmbKettei24.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei24.Location = New System.Drawing.Point(308, 611)
+        Me.cmbKettei24.Name = "cmbKettei24"
+        Me.cmbKettei24.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei24.TabIndex = 224
+        '
+        'cmbYotei24
+        '
+        Me.cmbYotei24.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei24.FormattingEnabled = True
+        Me.cmbYotei24.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei24.Location = New System.Drawing.Point(221, 611)
+        Me.cmbYotei24.Name = "cmbYotei24"
+        Me.cmbYotei24.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei24.TabIndex = 124
+        '
+        'cmbKettei23
+        '
+        Me.cmbKettei23.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei23.FormattingEnabled = True
+        Me.cmbKettei23.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei23.Location = New System.Drawing.Point(308, 588)
+        Me.cmbKettei23.Name = "cmbKettei23"
+        Me.cmbKettei23.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei23.TabIndex = 223
+        '
+        'cmbYotei23
+        '
+        Me.cmbYotei23.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei23.FormattingEnabled = True
+        Me.cmbYotei23.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei23.Location = New System.Drawing.Point(221, 588)
+        Me.cmbYotei23.Name = "cmbYotei23"
+        Me.cmbYotei23.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei23.TabIndex = 123
+        '
+        'cmbKettei22
+        '
+        Me.cmbKettei22.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei22.FormattingEnabled = True
+        Me.cmbKettei22.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei22.Location = New System.Drawing.Point(308, 565)
+        Me.cmbKettei22.Name = "cmbKettei22"
+        Me.cmbKettei22.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei22.TabIndex = 222
+        '
+        'cmbYotei22
+        '
+        Me.cmbYotei22.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei22.FormattingEnabled = True
+        Me.cmbYotei22.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei22.Location = New System.Drawing.Point(221, 565)
+        Me.cmbYotei22.Name = "cmbYotei22"
+        Me.cmbYotei22.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei22.TabIndex = 122
+        '
+        'cmbKettei21
+        '
+        Me.cmbKettei21.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei21.FormattingEnabled = True
+        Me.cmbKettei21.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei21.Location = New System.Drawing.Point(308, 542)
+        Me.cmbKettei21.Name = "cmbKettei21"
+        Me.cmbKettei21.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei21.TabIndex = 221
+        '
+        'cmbYotei21
+        '
+        Me.cmbYotei21.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei21.FormattingEnabled = True
+        Me.cmbYotei21.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei21.Location = New System.Drawing.Point(221, 542)
+        Me.cmbYotei21.Name = "cmbYotei21"
+        Me.cmbYotei21.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei21.TabIndex = 121
+        '
+        'cmbKettei20
+        '
+        Me.cmbKettei20.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei20.FormattingEnabled = True
+        Me.cmbKettei20.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei20.Location = New System.Drawing.Point(308, 519)
+        Me.cmbKettei20.Name = "cmbKettei20"
+        Me.cmbKettei20.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei20.TabIndex = 220
+        '
+        'cmbYotei20
+        '
+        Me.cmbYotei20.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei20.FormattingEnabled = True
+        Me.cmbYotei20.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei20.Location = New System.Drawing.Point(221, 519)
+        Me.cmbYotei20.Name = "cmbYotei20"
+        Me.cmbYotei20.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei20.TabIndex = 120
+        '
+        'cmbKettei19
+        '
+        Me.cmbKettei19.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei19.FormattingEnabled = True
+        Me.cmbKettei19.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei19.Location = New System.Drawing.Point(308, 496)
+        Me.cmbKettei19.Name = "cmbKettei19"
+        Me.cmbKettei19.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei19.TabIndex = 219
+        '
+        'cmbYotei19
+        '
+        Me.cmbYotei19.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei19.FormattingEnabled = True
+        Me.cmbYotei19.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei19.Location = New System.Drawing.Point(221, 496)
+        Me.cmbYotei19.Name = "cmbYotei19"
+        Me.cmbYotei19.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei19.TabIndex = 119
+        '
+        'cmbKettei18
+        '
+        Me.cmbKettei18.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei18.FormattingEnabled = True
+        Me.cmbKettei18.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei18.Location = New System.Drawing.Point(308, 473)
+        Me.cmbKettei18.Name = "cmbKettei18"
+        Me.cmbKettei18.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei18.TabIndex = 218
+        '
+        'cmbYotei18
+        '
+        Me.cmbYotei18.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei18.FormattingEnabled = True
+        Me.cmbYotei18.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei18.Location = New System.Drawing.Point(221, 473)
+        Me.cmbYotei18.Name = "cmbYotei18"
+        Me.cmbYotei18.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei18.TabIndex = 118
+        '
+        'cmbKettei17
+        '
+        Me.cmbKettei17.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei17.FormattingEnabled = True
+        Me.cmbKettei17.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei17.Location = New System.Drawing.Point(308, 450)
+        Me.cmbKettei17.Name = "cmbKettei17"
+        Me.cmbKettei17.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei17.TabIndex = 217
+        '
+        'cmbYotei17
+        '
+        Me.cmbYotei17.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei17.FormattingEnabled = True
+        Me.cmbYotei17.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei17.Location = New System.Drawing.Point(221, 450)
+        Me.cmbYotei17.Name = "cmbYotei17"
+        Me.cmbYotei17.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei17.TabIndex = 117
+        '
+        'cmbKettei16
+        '
+        Me.cmbKettei16.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei16.FormattingEnabled = True
+        Me.cmbKettei16.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei16.Location = New System.Drawing.Point(308, 427)
+        Me.cmbKettei16.Name = "cmbKettei16"
+        Me.cmbKettei16.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei16.TabIndex = 216
+        '
+        'cmbYotei16
+        '
+        Me.cmbYotei16.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei16.FormattingEnabled = True
+        Me.cmbYotei16.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei16.Location = New System.Drawing.Point(221, 427)
+        Me.cmbYotei16.Name = "cmbYotei16"
+        Me.cmbYotei16.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei16.TabIndex = 116
+        '
+        'cmbKettei15
+        '
+        Me.cmbKettei15.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei15.FormattingEnabled = True
+        Me.cmbKettei15.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei15.Location = New System.Drawing.Point(308, 404)
+        Me.cmbKettei15.Name = "cmbKettei15"
+        Me.cmbKettei15.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei15.TabIndex = 215
+        '
+        'cmbYotei15
+        '
+        Me.cmbYotei15.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei15.FormattingEnabled = True
+        Me.cmbYotei15.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei15.Location = New System.Drawing.Point(221, 404)
+        Me.cmbYotei15.Name = "cmbYotei15"
+        Me.cmbYotei15.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei15.TabIndex = 115
+        '
+        'cmbKettei14
+        '
+        Me.cmbKettei14.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei14.FormattingEnabled = True
+        Me.cmbKettei14.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei14.Location = New System.Drawing.Point(308, 381)
+        Me.cmbKettei14.Name = "cmbKettei14"
+        Me.cmbKettei14.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei14.TabIndex = 214
+        '
+        'cmbYotei14
+        '
+        Me.cmbYotei14.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei14.FormattingEnabled = True
+        Me.cmbYotei14.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei14.Location = New System.Drawing.Point(221, 381)
+        Me.cmbYotei14.Name = "cmbYotei14"
+        Me.cmbYotei14.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei14.TabIndex = 114
+        '
+        'cmbKettei13
+        '
+        Me.cmbKettei13.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei13.FormattingEnabled = True
+        Me.cmbKettei13.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei13.Location = New System.Drawing.Point(308, 358)
+        Me.cmbKettei13.Name = "cmbKettei13"
+        Me.cmbKettei13.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei13.TabIndex = 213
+        '
+        'cmbYotei13
+        '
+        Me.cmbYotei13.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei13.FormattingEnabled = True
+        Me.cmbYotei13.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei13.Location = New System.Drawing.Point(221, 358)
+        Me.cmbYotei13.Name = "cmbYotei13"
+        Me.cmbYotei13.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei13.TabIndex = 113
+        '
+        'cmbKettei12
+        '
+        Me.cmbKettei12.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei12.FormattingEnabled = True
+        Me.cmbKettei12.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei12.Location = New System.Drawing.Point(308, 335)
+        Me.cmbKettei12.Name = "cmbKettei12"
+        Me.cmbKettei12.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei12.TabIndex = 212
+        '
+        'cmbYotei12
+        '
+        Me.cmbYotei12.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei12.FormattingEnabled = True
+        Me.cmbYotei12.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei12.Location = New System.Drawing.Point(221, 335)
+        Me.cmbYotei12.Name = "cmbYotei12"
+        Me.cmbYotei12.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei12.TabIndex = 112
+        '
+        'cmbKettei11
+        '
+        Me.cmbKettei11.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei11.FormattingEnabled = True
+        Me.cmbKettei11.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei11.Location = New System.Drawing.Point(308, 312)
+        Me.cmbKettei11.Name = "cmbKettei11"
+        Me.cmbKettei11.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei11.TabIndex = 211
+        '
+        'cmbYotei11
+        '
+        Me.cmbYotei11.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei11.FormattingEnabled = True
+        Me.cmbYotei11.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei11.Location = New System.Drawing.Point(221, 312)
+        Me.cmbYotei11.Name = "cmbYotei11"
+        Me.cmbYotei11.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei11.TabIndex = 111
+        '
+        'cmbKettei10
+        '
+        Me.cmbKettei10.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei10.FormattingEnabled = True
+        Me.cmbKettei10.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei10.Location = New System.Drawing.Point(308, 289)
+        Me.cmbKettei10.Name = "cmbKettei10"
+        Me.cmbKettei10.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei10.TabIndex = 210
+        '
+        'cmbYotei10
+        '
+        Me.cmbYotei10.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei10.FormattingEnabled = True
+        Me.cmbYotei10.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei10.Location = New System.Drawing.Point(221, 289)
+        Me.cmbYotei10.Name = "cmbYotei10"
+        Me.cmbYotei10.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei10.TabIndex = 110
+        '
+        'cmbKettei9
+        '
+        Me.cmbKettei9.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei9.FormattingEnabled = True
+        Me.cmbKettei9.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei9.Location = New System.Drawing.Point(308, 266)
+        Me.cmbKettei9.Name = "cmbKettei9"
+        Me.cmbKettei9.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei9.TabIndex = 209
+        '
+        'cmbYotei9
+        '
+        Me.cmbYotei9.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei9.FormattingEnabled = True
+        Me.cmbYotei9.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei9.Location = New System.Drawing.Point(221, 266)
+        Me.cmbYotei9.Name = "cmbYotei9"
+        Me.cmbYotei9.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei9.TabIndex = 109
+        '
+        'cmbKettei8
+        '
+        Me.cmbKettei8.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei8.FormattingEnabled = True
+        Me.cmbKettei8.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei8.Location = New System.Drawing.Point(308, 243)
+        Me.cmbKettei8.Name = "cmbKettei8"
+        Me.cmbKettei8.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei8.TabIndex = 208
+        '
+        'cmbYotei8
+        '
+        Me.cmbYotei8.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei8.FormattingEnabled = True
+        Me.cmbYotei8.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei8.Location = New System.Drawing.Point(221, 243)
+        Me.cmbYotei8.Name = "cmbYotei8"
+        Me.cmbYotei8.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei8.TabIndex = 108
+        '
+        'cmbKettei7
+        '
+        Me.cmbKettei7.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei7.FormattingEnabled = True
+        Me.cmbKettei7.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei7.Location = New System.Drawing.Point(308, 220)
+        Me.cmbKettei7.Name = "cmbKettei7"
+        Me.cmbKettei7.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei7.TabIndex = 207
+        '
+        'cmbYotei7
+        '
+        Me.cmbYotei7.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei7.FormattingEnabled = True
+        Me.cmbYotei7.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei7.Location = New System.Drawing.Point(221, 220)
+        Me.cmbYotei7.Name = "cmbYotei7"
+        Me.cmbYotei7.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei7.TabIndex = 107
+        '
+        'cmbKettei6
+        '
+        Me.cmbKettei6.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei6.FormattingEnabled = True
+        Me.cmbKettei6.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei6.Location = New System.Drawing.Point(308, 197)
+        Me.cmbKettei6.Name = "cmbKettei6"
+        Me.cmbKettei6.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei6.TabIndex = 206
+        '
+        'cmbYotei6
+        '
+        Me.cmbYotei6.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei6.FormattingEnabled = True
+        Me.cmbYotei6.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei6.Location = New System.Drawing.Point(221, 197)
+        Me.cmbYotei6.Name = "cmbYotei6"
+        Me.cmbYotei6.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei6.TabIndex = 106
+        '
+        'cmbKettei5
+        '
+        Me.cmbKettei5.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei5.FormattingEnabled = True
+        Me.cmbKettei5.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei5.Location = New System.Drawing.Point(308, 174)
+        Me.cmbKettei5.Name = "cmbKettei5"
+        Me.cmbKettei5.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei5.TabIndex = 205
+        '
+        'cmbYotei5
+        '
+        Me.cmbYotei5.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei5.FormattingEnabled = True
+        Me.cmbYotei5.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbYotei5.Location = New System.Drawing.Point(221, 174)
+        Me.cmbYotei5.Name = "cmbYotei5"
+        Me.cmbYotei5.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei5.TabIndex = 105
+        '
+        'cmbKettei4
+        '
+        Me.cmbKettei4.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei4.FormattingEnabled = True
+        Me.cmbKettei4.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei4.Location = New System.Drawing.Point(308, 151)
+        Me.cmbKettei4.Name = "cmbKettei4"
+        Me.cmbKettei4.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei4.TabIndex = 204
+        '
+        'cmbYotei4
+        '
+        Me.cmbYotei4.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei4.FormattingEnabled = True
+        Me.cmbYotei4.Location = New System.Drawing.Point(221, 151)
+        Me.cmbYotei4.Name = "cmbYotei4"
+        Me.cmbYotei4.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei4.TabIndex = 104
+        '
+        'cmbKettei3
+        '
+        Me.cmbKettei3.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei3.FormattingEnabled = True
+        Me.cmbKettei3.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei3.Location = New System.Drawing.Point(308, 128)
+        Me.cmbKettei3.Name = "cmbKettei3"
+        Me.cmbKettei3.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei3.TabIndex = 203
+        '
+        'cmbYotei3
+        '
+        Me.cmbYotei3.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei3.FormattingEnabled = True
+        Me.cmbYotei3.Location = New System.Drawing.Point(221, 128)
+        Me.cmbYotei3.Name = "cmbYotei3"
+        Me.cmbYotei3.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei3.TabIndex = 103
+        '
+        'cmbKettei2
+        '
+        Me.cmbKettei2.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei2.FormattingEnabled = True
+        Me.cmbKettei2.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei2.Location = New System.Drawing.Point(308, 105)
+        Me.cmbKettei2.Name = "cmbKettei2"
+        Me.cmbKettei2.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei2.TabIndex = 202
+        '
+        'cmbYotei2
+        '
+        Me.cmbYotei2.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei2.FormattingEnabled = True
+        Me.cmbYotei2.Location = New System.Drawing.Point(221, 105)
+        Me.cmbYotei2.Name = "cmbYotei2"
+        Me.cmbYotei2.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei2.TabIndex = 102
+        '
+        'cmbKettei1
+        '
+        Me.cmbKettei1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbKettei1.FormattingEnabled = True
+        Me.cmbKettei1.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.cmbKettei1.Items.AddRange(New Object() {"　　　○　　", "　　　✕　　", "　　　○　　", "　　　✕　　"})
+        Me.cmbKettei1.Location = New System.Drawing.Point(308, 82)
+        Me.cmbKettei1.Name = "cmbKettei1"
+        Me.cmbKettei1.Size = New System.Drawing.Size(88, 24)
+        Me.cmbKettei1.TabIndex = 201
+        '
+        'cmbYotei1
+        '
+        Me.cmbYotei1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmbYotei1.FormattingEnabled = True
+        Me.cmbYotei1.Location = New System.Drawing.Point(221, 82)
+        Me.cmbYotei1.Name = "cmbYotei1"
+        Me.cmbYotei1.Size = New System.Drawing.Size(88, 24)
+        Me.cmbYotei1.TabIndex = 101
         '
         '食事伝票
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1183, 783)
+        Me.Controls.Add(Me.btnKuria)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.TextBox13)
         Me.Controls.Add(Me.txtKetteikei)
         Me.Controls.Add(Me.txtYoteiKei)
@@ -1872,6 +1895,7 @@ Partial Class 食事伝票
         Me.Controls.Add(Me.YmdBox1)
         Me.Name = "食事伝票"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1889,127 +1913,77 @@ Partial Class 食事伝票
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents txtName1 As System.Windows.Forms.TextBox
     Friend WithEvents txtNo1 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbYotei1 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbKettei1 As System.Windows.Forms.ComboBox
     Friend WithEvents txtBikou1 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou2 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei2 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei2 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou3 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei3 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei3 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou4 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei4 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei4 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou5 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei5 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei5 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName5 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou6 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei6 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei6 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName6 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou7 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei7 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei7 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName7 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox23 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou8 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei8 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei8 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName8 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox26 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou9 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei9 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei9 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName9 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox29 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou10 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei10 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei10 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName10 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou11 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei11 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei11 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName11 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox35 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou22 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei22 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei22 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName22 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox38 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou21 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei21 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei21 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName21 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox41 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou20 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei20 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei20 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName20 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox44 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou19 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei19 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei19 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName19 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox47 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou18 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei18 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei18 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName18 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox50 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou17 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei17 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei17 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName17 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox53 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou16 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei16 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei16 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName16 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox56 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou15 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei15 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei15 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName15 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox59 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou14 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei14 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei14 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName14 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox62 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou13 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei13 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei13 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName13 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox65 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou12 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei12 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei12 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName12 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox68 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou25 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei25 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei25 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName25 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox71 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou24 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei24 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei24 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName24 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox74 As System.Windows.Forms.TextBox
     Friend WithEvents txtBikou23 As System.Windows.Forms.TextBox
-    Friend WithEvents cmbKettei23 As System.Windows.Forms.ComboBox
-    Friend WithEvents cmbYotei23 As System.Windows.Forms.ComboBox
     Friend WithEvents txtName23 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox77 As System.Windows.Forms.TextBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
@@ -2023,4 +1997,56 @@ Partial Class 食事伝票
     Friend WithEvents txtYoteiKei As System.Windows.Forms.TextBox
     Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox19 As System.Windows.Forms.TextBox
+    Friend WithEvents cmbYotei1 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei1 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei2 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei2 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei3 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei3 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei4 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei4 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei5 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei5 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei6 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei6 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei7 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei7 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei8 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei8 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei9 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei9 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei10 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei10 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei11 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei11 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei22 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei22 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei21 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei21 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei20 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei20 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei19 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei19 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei18 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei18 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei17 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei17 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei16 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei16 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei15 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei15 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei14 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei14 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei13 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei13 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei12 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei12 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei25 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei25 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei24 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei24 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbKettei23 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents cmbYotei23 As Symphony_dayservice.ReadOnlyComboBox
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnKuria As System.Windows.Forms.Button
 End Class

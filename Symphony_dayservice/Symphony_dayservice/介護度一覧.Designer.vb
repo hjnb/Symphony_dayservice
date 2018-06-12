@@ -22,7 +22,7 @@ Partial Class 介護度一覧
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lstName = New System.Windows.Forms.ListBox()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -40,14 +40,14 @@ Partial Class 介護度一覧
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'lstName
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 12
-        Me.ListBox1.Location = New System.Drawing.Point(26, 25)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(135, 496)
-        Me.ListBox1.TabIndex = 0
+        Me.lstName.FormattingEnabled = True
+        Me.lstName.ItemHeight = 12
+        Me.lstName.Location = New System.Drawing.Point(26, 25)
+        Me.lstName.Name = "lstName"
+        Me.lstName.Size = New System.Drawing.Size(135, 496)
+        Me.lstName.TabIndex = 0
         '
         'lblName
         '
@@ -203,7 +203,7 @@ Partial Class 介護度一覧
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblName)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.lstName)
         Me.Name = "介護度一覧"
         Me.Text = "介護度一覧"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -211,7 +211,7 @@ Partial Class 介護度一覧
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents lstName As System.Windows.Forms.ListBox
     Friend WithEvents lblName As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
