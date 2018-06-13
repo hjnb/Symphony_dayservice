@@ -20,6 +20,9 @@ Public Class 月間予定表
     Private Sub 月間予定表_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
 
+        'スタイル定義
+        createCellStyle()
+
         '利用者リストの表示
         displayUserList()
 
@@ -41,6 +44,7 @@ Public Class 月間予定表
         dayRowCellStyle = New DataGridViewCellStyle()
         dayRowCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         dayRowCellStyle.Font = New Font("MS UI Gothic", 9)
+        dayRowCellStyle.BackColor = Color.FromKnownColor(KnownColor.Control)
 
         '土曜日の列のセルスタイル
         saturdayColumnCellStyle = New DataGridViewCellStyle()
@@ -92,7 +96,7 @@ Public Class 月間予定表
         End With
     End Sub
 
-    Private Sub settingDgvPlanColumn()
+    Private Sub settingDgvPlanStyle()
         With dgvPlan
             With .Columns("Count")
                 .Width = 30
@@ -104,6 +108,15 @@ Public Class 月間予定表
                 End With
             Next
         End With
+
+        '日にちの行のスタイル設定
+        dgvPlan.Rows(0).DefaultCellStyle = dateRowCellStyle
+        dgvPlan.Rows(28).DefaultCellStyle = dateRowCellStyle
+
+        '曜日の行のスタイル設定
+        dgvPlan.Rows(1).DefaultCellStyle = dayRowCellStyle
+        dgvPlan.Rows(29).DefaultCellStyle = dayRowCellStyle
+
     End Sub
 
     Private Sub initDgvPlan()
@@ -121,10 +134,12 @@ Public Class 月間予定表
         For i As Integer = 0 To 55
             row = dt.NewRow()
             If i = 0 Then
+                '日にち(1～16)
                 For j As Integer = 1 To 16
                     row("D" & j) = j
                 Next
             ElseIf i = 28 Then
+                '日にち(17～31)
                 For j As Integer = 1 To 15
                     row("D" & j) = j + 16
                 Next
@@ -136,7 +151,7 @@ Public Class 月間予定表
         dgvPlan.DataSource = dt
 
         '列設定等
-        settingDgvPlanColumn()
+        settingDgvPlanStyle()
 
     End Sub
 
