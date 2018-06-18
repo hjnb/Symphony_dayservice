@@ -28,7 +28,7 @@ Partial Class 月間予定表
         Me.btnRegist = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnTextClear = New System.Windows.Forms.Button()
         Me.dgvPlan = New System.Windows.Forms.DataGridView()
         CType(Me.dgvPlan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -92,14 +92,14 @@ Partial Class 月間予定表
         Me.btnDelete.Text = "削　除"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'btnClear
+        'btnTextClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(1171, 26)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(79, 23)
-        Me.btnClear.TabIndex = 7
-        Me.btnClear.Text = "テキストクリア"
-        Me.btnClear.UseVisualStyleBackColor = True
+        Me.btnTextClear.Location = New System.Drawing.Point(1171, 26)
+        Me.btnTextClear.Name = "btnTextClear"
+        Me.btnTextClear.Size = New System.Drawing.Size(79, 23)
+        Me.btnTextClear.TabIndex = 7
+        Me.btnTextClear.Text = "テキストクリア"
+        Me.btnTextClear.UseVisualStyleBackColor = True
         '
         'dgvPlan
         '
@@ -107,7 +107,7 @@ Partial Class 月間予定表
         Me.dgvPlan.Location = New System.Drawing.Point(257, 66)
         Me.dgvPlan.Name = "dgvPlan"
         Me.dgvPlan.RowTemplate.Height = 21
-        Me.dgvPlan.Size = New System.Drawing.Size(993, 787)
+        Me.dgvPlan.Size = New System.Drawing.Size(993, 791)
         Me.dgvPlan.TabIndex = 8
         '
         '月間予定表
@@ -116,7 +116,7 @@ Partial Class 月間予定表
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1431, 898)
         Me.Controls.Add(Me.dgvPlan)
-        Me.Controls.Add(Me.btnClear)
+        Me.Controls.Add(Me.btnTextClear)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnRegist)
@@ -135,6 +135,6 @@ Partial Class 月間予定表
     Friend WithEvents btnRegist As System.Windows.Forms.Button
     Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents btnDelete As System.Windows.Forms.Button
-    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents btnTextClear As System.Windows.Forms.Button
     Friend WithEvents dgvPlan As System.Windows.Forms.DataGridView
 End Class

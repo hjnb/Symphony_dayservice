@@ -2,6 +2,9 @@
 
 Public Class 月間予定表
 
+    '曜日
+    Private dayArray() As String = {"日", "月", "火", "水", "木", "金", "土"}
+
     '土曜日の列のセルスタイル
     Private saturdayColumnCellStyle As DataGridViewCellStyle
 
@@ -13,6 +16,9 @@ Public Class 月間予定表
 
     '曜日の行のセルスタイル
     Private dayRowCellStyle As DataGridViewCellStyle
+
+    'デフォルトのセルスタイル
+    Private defaultCellStyle As DataGridViewCellStyle
 
     'Count列の5までのセルスタイル
     Private count5CellStyle As DataGridViewCellStyle
@@ -29,8 +35,11 @@ Public Class 月間予定表
     'Count列の25までのセルスタイル
     Private count25CellStyle As DataGridViewCellStyle
 
+    '計のセルスタイル
+    Private totalCellStyle As DataGridViewCellStyle
+
     '表示用データテーブル
-    Private dt As DataTable = New DataTable()
+    Private dtPlan As DataTable = New DataTable()
 
     Private Sub 月間予定表_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
@@ -41,19 +50,23 @@ Public Class 月間予定表
         '利用者リストの表示
         displayUserList()
 
-        '
+        'dgv初期化
         initDgvPlan()
 
-        '現在年月設定
+        '現在年月設定()
         ymBox.setADStr(Today.ToString("yyyy/MM/dd"))
 
     End Sub
 
     Private Sub createCellStyle()
+        'デフォルトのセルスタイル
+        defaultCellStyle = New DataGridViewCellStyle()
+        defaultCellStyle = dgvPlan.DefaultCellStyle
+
         '日にちの行のセルスタイル
         dateRowCellStyle = New DataGridViewCellStyle()
         dateRowCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        dateRowCellStyle.Font = New Font("MS UI Gothic", 9)
+        dateRowCellStyle.Font = New Font("MS UI Gothic", 10)
 
         '曜日の行のセルスタイル
         dayRowCellStyle = New DataGridViewCellStyle()
@@ -73,33 +86,38 @@ Public Class 月間予定表
 
         'Count列の5までのセルスタイル
         count5CellStyle = New DataGridViewCellStyle()
-        count5CellStyle.BackColor = Color.FromArgb(254, 222, 253)
-        count5CellStyle.Font = New Font("MS UI Gothic", 8)
+        count5CellStyle.BackColor = Color.FromArgb(255, 242, 255)
+        count5CellStyle.Font = New Font("MS UI Gothic", 10)
         count5CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         'Count列の10までのセルスタイル
         count10CellStyle = New DataGridViewCellStyle()
-        count10CellStyle.BackColor = Color.FromArgb(248, 154, 245)
-        count10CellStyle.Font = New Font("MS UI Gothic", 8)
+        count10CellStyle.BackColor = Color.FromArgb(254, 222, 253)
+        count10CellStyle.Font = New Font("MS UI Gothic", 10)
         count10CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         'Count列の15までのセルスタイル
         count15CellStyle = New DataGridViewCellStyle()
-        count15CellStyle.BackColor = Color.FromArgb(233, 31, 233)
-        count15CellStyle.Font = New Font("MS UI Gothic", 8)
+        count15CellStyle.BackColor = Color.FromArgb(248, 154, 245)
+        count15CellStyle.Font = New Font("MS UI Gothic", 10)
         count15CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         'Count列の20までのセルスタイル
         count20CellStyle = New DataGridViewCellStyle()
-        count20CellStyle.BackColor = Color.FromArgb(194, 18, 172)
-        count20CellStyle.Font = New Font("MS UI Gothic", 8)
+        count20CellStyle.BackColor = Color.FromArgb(233, 31, 233)
+        count20CellStyle.Font = New Font("MS UI Gothic", 10)
         count20CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         'Count列の25までのセルスタイル
         count25CellStyle = New DataGridViewCellStyle()
-        count25CellStyle.BackColor = Color.FromArgb(255, 200, 200)
-        count25CellStyle.Font = New Font("MS UI Gothic", 8)
+        count25CellStyle.BackColor = Color.FromArgb(194, 18, 172)
+        count25CellStyle.Font = New Font("MS UI Gothic", 10)
         count25CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+        '計のセルスタイル
+        totalCellStyle = New DataGridViewCellStyle()
+        totalCellStyle.Font = New Font("MS UI Gothic", 9)
+        totalCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
     End Sub
 
@@ -144,29 +162,82 @@ Public Class 月間予定表
 
     Private Sub settingDgvPlanStyle()
         With dgvPlan
+            'Count列
             With .Columns("Count")
                 .Width = 30
+                .ReadOnly = True
             End With
 
+            'Count列以外
             For i As Integer = 1 To 16
                 With .Columns("D" & i)
                     .Width = 60
                 End With
             Next
+
+            '日にちの行のスタイル設定
+            With .Rows(0)
+                .DefaultCellStyle = dateRowCellStyle
+                .Height = 15
+                .ReadOnly = True
+            End With
+            With .Rows(28)
+                .DefaultCellStyle = dateRowCellStyle
+                .Height = 15
+                .ReadOnly = True
+            End With
+
+            '曜日の行のスタイル設定
+            With .Rows(1)
+                .DefaultCellStyle = dayRowCellStyle
+                .Height = 15
+                .ReadOnly = True
+            End With
+            With .Rows(29)
+                .DefaultCellStyle = dayRowCellStyle
+                .Height = 15
+                .ReadOnly = True
+            End With
+
+            'Count列の5までのセルスタイル
+            For i As Integer = 2 To 6
+                .Rows(i).Cells("Count").Style = count5CellStyle
+                .Rows(i + 28).Cells("Count").Style = count5CellStyle
+            Next
+
+            'Count列の10までのセルスタイル
+            For i As Integer = 7 To 11
+                .Rows(i).Cells("Count").Style = count10CellStyle
+                .Rows(i + 28).Cells("Count").Style = count10CellStyle
+            Next
+
+            'Count列の15までのセルスタイル
+            For i As Integer = 12 To 16
+                .Rows(i).Cells("Count").Style = count15CellStyle
+                .Rows(i + 28).Cells("Count").Style = count15CellStyle
+            Next
+
+            'Count列の20までのセルスタイル
+            For i As Integer = 17 To 21
+                .Rows(i).Cells("Count").Style = count20CellStyle
+                .Rows(i + 28).Cells("Count").Style = count20CellStyle
+            Next
+
+            'Count列の25までのセルスタイル
+            For i As Integer = 22 To 26
+                .Rows(i).Cells("Count").Style = count25CellStyle
+                .Rows(i + 28).Cells("Count").Style = count25CellStyle
+            Next
+
+            '計のセルスタイル
+            .Rows(27).Cells("Count").Style = totalCellStyle
+            .Rows(55).Cells("Count").Style = totalCellStyle
+
+            '計の行
+            .Rows(27).ReadOnly = True
+            .Rows(55).ReadOnly = True
+
         End With
-
-        '日にちの行のスタイル設定
-        dgvPlan.Rows(0).DefaultCellStyle = dateRowCellStyle
-        dgvPlan.Rows(28).DefaultCellStyle = dateRowCellStyle
-
-        '曜日の行のスタイル設定
-        dgvPlan.Rows(1).DefaultCellStyle = dayRowCellStyle
-        dgvPlan.Rows(29).DefaultCellStyle = dayRowCellStyle
-
-        'Count列の5までのセルスタイル
-        For i As Integer = 2 To 6
-            dgvPlan.Rows(i).Cells("Count").Style = count5CellStyle
-        Next
 
     End Sub
 
@@ -175,15 +246,15 @@ Public Class 月間予定表
         settingDgvPlan()
 
         '列追加
-        dt.Columns.Add("Count", Type.GetType("System.String"))
+        dtPlan.Columns.Add("Count", Type.GetType("System.String"))
         For i As Integer = 1 To 16
-            dt.Columns.Add("D" & i, Type.GetType("System.String"))
+            dtPlan.Columns.Add("D" & i, Type.GetType("System.String"))
         Next
 
         '日にちの行、空の行追加
         Dim row As DataRow
         For i As Integer = 0 To 55
-            row = dt.NewRow()
+            row = dtPlan.NewRow()
             If i = 0 Then
                 '日にち(1～16)
                 For j As Integer = 1 To 16
@@ -201,15 +272,122 @@ Public Class 月間予定表
             ElseIf i > 29 AndAlso (i + 1) Mod 5 = 0 Then
                 row("Count") = i - 30 + 1
             End If
-            dt.Rows.Add(row)
+            dtPlan.Rows.Add(row)
         Next
 
         '表示
-        dgvPlan.DataSource = dt
+        dgvPlan.DataSource = dtPlan
 
-        '列設定等
+        '列、行のスタイル設定等
         settingDgvPlanStyle()
+
+        'セル選択解除
+        dgvPlan.CurrentCell.Selected = False
 
     End Sub
 
+    Private Sub clearDgv()
+        '曜日行の文字クリア
+        For i As Integer = 1 To 16
+            dgvPlan.Rows(1).Cells("D" & i).Value = ""
+            dgvPlan.Rows(29).Cells("D" & i).Value = ""
+        Next
+
+        '氏名入力部分の文字、スタイルクリア
+        For i As Integer = 2 To 54
+            For j As Integer = 1 To 16
+                dgvPlan.Rows(i).Cells("D" & j).Value = ""
+                dgvPlan.Rows(i).Cells("D" & j).Style = defaultCellStyle
+                dgvPlan.Rows(i).Cells("D" & j).ReadOnly = False
+            Next
+            If i = 26 Then
+                i = 29
+            End If
+        Next
+
+    End Sub
+
+    Private Sub setDay(ymStr As String)
+        Dim year As Integer = CInt(ymStr.Substring(0, 4))
+        Dim month As Integer = CInt(ymStr.Substring(5, 2))
+        Dim firstDayNum As Integer = New DateTime(year, month, 1).DayOfWeek '最初の曜日の数値
+        Dim dayLimit As Integer = DateTime.DaysInMonth(year, month) '月の日数
+        Dim dayStr As String = ""
+
+        '１～１６日の曜日行の値設定
+        For i As Integer = 1 To 16
+            dayStr = dayArray((firstDayNum + (i - 1)) Mod 7)
+            dgvPlan.Rows(1).Cells("D" & i).Value = dayStr
+            If dayStr = "土" Then
+                For j As Integer = 2 To 26
+                    dgvPlan.Rows(j).Cells("D" & i).Style = saturdayColumnCellStyle
+                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
+                Next
+            ElseIf dayStr = "日" Then
+                For j As Integer = 2 To 26
+                    dgvPlan.Rows(j).Cells("D" & i).Style = sundayColumnCellStyle
+                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
+                Next
+            End If
+        Next
+        '１７～３１日の曜日行の値設定
+        For i As Integer = 1 To 15 - (31 - dayLimit)
+            dayStr = dayArray((firstDayNum + 2 + (i - 1)) Mod 7)
+            dgvPlan.Rows(29).Cells("D" & i).Value = dayStr
+            If dayStr = "土" Then
+                For j As Integer = 30 To 54
+                    dgvPlan.Rows(j).Cells("D" & i).Style = saturdayColumnCellStyle
+                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
+                Next
+            ElseIf dayStr = "日" Then
+                For j As Integer = 30 To 54
+                    dgvPlan.Rows(j).Cells("D" & i).Style = sundayColumnCellStyle
+                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
+                Next
+            End If
+        Next
+
+        '対象の月に存在しない日の列を編集不可にする
+        For i As Integer = 16 - (31 - dayLimit) To 16
+            For j As Integer = 30 To 54
+                dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
+            Next
+        Next
+
+    End Sub
+
+    Private Sub displayPlan(ymStr As String)
+
+        '選択解除
+        dgvPlan.CurrentCell.Selected = False
+    End Sub
+
+    Private Sub dgvPlan_CellPainting(sender As Object, e As System.Windows.Forms.DataGridViewCellPaintingEventArgs) Handles dgvPlan.CellPainting
+        If (e.RowIndex = 28) AndAlso (e.PaintParts And DataGridViewPaintParts.Border) = DataGridViewPaintParts.Border Then
+            e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.Inset
+        End If
+    End Sub
+
+    Private Sub ymBox_YmdTextChange(sender As Object, e As System.EventArgs) Handles ymBox.YmdTextChange
+        'dgvのデータクリア
+        clearDgv()
+
+        '曜日設定
+        setDay(ymBox.getADYmStr())
+
+        'データ表示
+        displayPlan(ymBox.getADYmStr())
+
+    End Sub
+
+    Private Sub btnTextClear_Click(sender As System.Object, e As System.EventArgs) Handles btnTextClear.Click
+        For i As Integer = 2 To 54
+            For j As Integer = 1 To 16
+                dgvPlan.Rows(i).Cells("D" & j).Value = ""
+            Next
+            If i = 26 Then
+                i = 29
+            End If
+        Next
+    End Sub
 End Class
