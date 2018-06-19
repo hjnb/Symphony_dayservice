@@ -2,7 +2,7 @@
 
 Public Class 月間予定表
 
-    '曜日
+    '曜日配列
     Private dayArray() As String = {"日", "月", "火", "水", "木", "金", "土"}
 
     '土曜日の列のセルスタイル
@@ -35,8 +35,8 @@ Public Class 月間予定表
     'Count列の25までのセルスタイル
     Private count25CellStyle As DataGridViewCellStyle
 
-    '計のセルスタイル
-    Private totalCellStyle As DataGridViewCellStyle
+    '計の行のセルスタイル
+    Private totalRowCellStyle As DataGridViewCellStyle
 
     '表示用データテーブル
     Private dtPlan As DataTable = New DataTable()
@@ -114,10 +114,10 @@ Public Class 月間予定表
         count25CellStyle.Font = New Font("MS UI Gothic", 10)
         count25CellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
-        '計のセルスタイル
-        totalCellStyle = New DataGridViewCellStyle()
-        totalCellStyle.Font = New Font("MS UI Gothic", 9)
-        totalCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        '計の行のセルスタイル
+        totalRowCellStyle = New DataGridViewCellStyle()
+        totalRowCellStyle.Font = New Font("MS UI Gothic", 9)
+        totalRowCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
     End Sub
 
@@ -156,7 +156,7 @@ Public Class 月間予定表
             .ColumnHeadersVisible = False
             .RowTemplate.Height = 14
             .ShowCellToolTips = False
-            .DefaultCellStyle.Font = New Font("MS UI Gothic", 8)
+            .DefaultCellStyle.Font = New Font("MS UI Gothic", 6.5)
         End With
     End Sub
 
@@ -164,14 +164,14 @@ Public Class 月間予定表
         With dgvPlan
             'Count列
             With .Columns("Count")
-                .Width = 30
+                .Width = 28
                 .ReadOnly = True
             End With
 
             'Count列以外
             For i As Integer = 1 To 16
                 With .Columns("D" & i)
-                    .Width = 60
+                    .Width = 64
                 End With
             Next
 
@@ -229,12 +229,10 @@ Public Class 月間予定表
                 .Rows(i + 28).Cells("Count").Style = count25CellStyle
             Next
 
-            '計のセルスタイル
-            .Rows(27).Cells("Count").Style = totalCellStyle
-            .Rows(55).Cells("Count").Style = totalCellStyle
-
-            '計の行
+            '計の行のセルスタイル
+            .Rows(27).DefaultCellStyle = totalRowCellStyle
             .Rows(27).ReadOnly = True
+            .Rows(55).DefaultCellStyle = totalRowCellStyle
             .Rows(55).ReadOnly = True
 
         End With
@@ -287,10 +285,12 @@ Public Class 月間予定表
     End Sub
 
     Private Sub clearDgv()
-        '曜日行の文字クリア
+        '曜日行の文字クリア、計の行クリア
         For i As Integer = 1 To 16
             dgvPlan.Rows(1).Cells("D" & i).Value = ""
+            dgvPlan.Rows(27).Cells("D" & i).Value = ""
             dgvPlan.Rows(29).Cells("D" & i).Value = ""
+            dgvPlan.Rows(55).Cells("D" & i).Value = ""
         Next
 
         '氏名入力部分の文字、スタイルクリア
@@ -357,9 +357,71 @@ Public Class 月間予定表
     End Sub
 
     Private Sub displayPlan(ymStr As String)
+        '選択氏名ラベルクリア
+        selectUserLabel.Text = ""
+        UserListBox.ClearSelected()
+
+        Dim gyoNum, dayNum As Integer
+        Dim nam As String
+        Dim reader As System.Data.OleDb.OleDbDataReader
+        Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
+        Dim SQLCm As OleDbCommand = Cn.CreateCommand
+        SQLCm.CommandText = "select Gyo, Ym, Day, Nam from PlnM where Ym=@ym order by Day, Gyo"
+        SQLCm.Parameters.Clear()
+        SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ymStr
+        Cn.Open()
+        reader = SQLCm.ExecuteReader()
+        While reader.Read() = True
+            gyoNum = If(Util.checkDBNullValue(reader("Gyo")) = "", -1, CInt(reader("Gyo")))
+            dayNum = If(Util.checkDBNullValue(reader("Day")) = "", -1, CInt(reader("Day")))
+            If gyoNum = -1 OrElse dayNum = -1 Then
+                Continue While
+            End If
+            nam = Util.checkDBNullValue(reader("Nam"))
+            If dayNum >= 17 Then
+                gyoNum = gyoNum + 29
+                dayNum = dayNum - 16
+            Else
+                gyoNum = gyoNum + 1
+            End If
+            dtPlan.Rows(gyoNum).Item("D" & dayNum) = nam
+        End While
+        reader.Close()
+        Cn.Close()
+
+        '計の行の書き込み処理
+        writeTotalNum()
 
         '選択解除
         dgvPlan.CurrentCell.Selected = False
+    End Sub
+
+    Private Sub writeTotalNum()
+        Dim count As Integer = 0
+        '１～１６日の計
+        For i As Integer = 1 To 16
+            count = 0
+            For j As Integer = 2 To 26
+                If Util.checkDBNullValue(dtPlan.Rows(j).Item("D" & i)) <> "" Then
+                    count += 1
+                End If
+            Next
+            If count <> 0 Then
+                dtPlan.Rows(27).Item("D" & i) = count
+            End If
+        Next
+        '１７～３１日の計
+        For i As Integer = 1 To 15
+            count = 0
+            For j As Integer = 30 To 54
+                If Util.checkDBNullValue(dtPlan.Rows(j).Item("D" & i)) <> "" Then
+                    count += 1
+                End If
+            Next
+            If count <> 0 Then
+                dtPlan.Rows(55).Item("D" & i) = count
+            End If
+        Next
     End Sub
 
     Private Sub dgvPlan_CellPainting(sender As Object, e As System.Windows.Forms.DataGridViewCellPaintingEventArgs) Handles dgvPlan.CellPainting
@@ -381,13 +443,23 @@ Public Class 月間予定表
     End Sub
 
     Private Sub btnTextClear_Click(sender As System.Object, e As System.EventArgs) Handles btnTextClear.Click
-        For i As Integer = 2 To 54
+        For i As Integer = 2 To 55
             For j As Integer = 1 To 16
                 dgvPlan.Rows(i).Cells("D" & j).Value = ""
             Next
-            If i = 26 Then
+            If i = 27 Then
                 i = 29
             End If
         Next
+    End Sub
+
+    Private Sub UserListBox_MouseClick(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles UserListBox.MouseClick
+        selectUserLabel.Text = UserListBox.SelectedItem
+    End Sub
+
+    Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
+        If Not IsNothing(dgvPlan.CurrentCell) AndAlso dgvPlan.CurrentCell.Selected = True AndAlso dgvPlan.CurrentCell.ReadOnly = False Then
+            dgvPlan.CurrentCell.Value = selectUserLabel.Text
+        End If
     End Sub
 End Class

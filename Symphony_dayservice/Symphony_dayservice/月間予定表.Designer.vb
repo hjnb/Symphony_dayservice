@@ -30,6 +30,7 @@ Partial Class 月間予定表
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnTextClear = New System.Windows.Forms.Button()
         Me.dgvPlan = New System.Windows.Forms.DataGridView()
+        Me.selectUserLabel = New System.Windows.Forms.Label()
         CType(Me.dgvPlan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,7 +38,7 @@ Partial Class 月間予定表
         '
         Me.UserListBox.FormattingEnabled = True
         Me.UserListBox.ItemHeight = 12
-        Me.UserListBox.Location = New System.Drawing.Point(12, 31)
+        Me.UserListBox.Location = New System.Drawing.Point(7, 31)
         Me.UserListBox.Name = "UserListBox"
         Me.UserListBox.Size = New System.Drawing.Size(129, 544)
         Me.UserListBox.TabIndex = 1
@@ -45,7 +46,7 @@ Partial Class 月間予定表
         'btnAdd
         '
         Me.btnAdd.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(161, 131)
+        Me.btnAdd.Location = New System.Drawing.Point(150, 131)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 349)
         Me.btnAdd.TabIndex = 2
@@ -58,7 +59,7 @@ Partial Class 月間予定表
         Me.ymBox.DateText = ""
         Me.ymBox.EraLabelText = "H30"
         Me.ymBox.EraText = ""
-        Me.ymBox.Location = New System.Drawing.Point(434, 6)
+        Me.ymBox.Location = New System.Drawing.Point(416, 6)
         Me.ymBox.MonthLabelText = "06"
         Me.ymBox.MonthText = ""
         Me.ymBox.Name = "ymBox"
@@ -67,7 +68,7 @@ Partial Class 月間予定表
         '
         'btnRegist
         '
-        Me.btnRegist.Location = New System.Drawing.Point(579, 9)
+        Me.btnRegist.Location = New System.Drawing.Point(561, 9)
         Me.btnRegist.Name = "btnRegist"
         Me.btnRegist.Size = New System.Drawing.Size(75, 40)
         Me.btnRegist.TabIndex = 4
@@ -76,7 +77,7 @@ Partial Class 月間予定表
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(736, 9)
+        Me.btnPrint.Location = New System.Drawing.Point(718, 9)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 40)
         Me.btnPrint.TabIndex = 5
@@ -85,7 +86,7 @@ Partial Class 月間予定表
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(658, 9)
+        Me.btnDelete.Location = New System.Drawing.Point(640, 9)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 40)
         Me.btnDelete.TabIndex = 6
@@ -94,7 +95,7 @@ Partial Class 月間予定表
         '
         'btnTextClear
         '
-        Me.btnTextClear.Location = New System.Drawing.Point(1171, 26)
+        Me.btnTextClear.Location = New System.Drawing.Point(1216, 26)
         Me.btnTextClear.Name = "btnTextClear"
         Me.btnTextClear.Size = New System.Drawing.Size(79, 23)
         Me.btnTextClear.TabIndex = 7
@@ -104,17 +105,28 @@ Partial Class 月間予定表
         'dgvPlan
         '
         Me.dgvPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPlan.Location = New System.Drawing.Point(257, 66)
+        Me.dgvPlan.Location = New System.Drawing.Point(240, 66)
         Me.dgvPlan.Name = "dgvPlan"
         Me.dgvPlan.RowTemplate.Height = 21
-        Me.dgvPlan.Size = New System.Drawing.Size(993, 791)
+        Me.dgvPlan.Size = New System.Drawing.Size(1055, 791)
         Me.dgvPlan.TabIndex = 8
+        '
+        'selectUserLabel
+        '
+        Me.selectUserLabel.AutoSize = True
+        Me.selectUserLabel.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.selectUserLabel.ForeColor = System.Drawing.Color.Blue
+        Me.selectUserLabel.Location = New System.Drawing.Point(208, 17)
+        Me.selectUserLabel.Name = "selectUserLabel"
+        Me.selectUserLabel.Size = New System.Drawing.Size(0, 27)
+        Me.selectUserLabel.TabIndex = 9
         '
         '月間予定表
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1431, 898)
+        Me.Controls.Add(Me.selectUserLabel)
         Me.Controls.Add(Me.dgvPlan)
         Me.Controls.Add(Me.btnTextClear)
         Me.Controls.Add(Me.btnDelete)
@@ -127,6 +139,7 @@ Partial Class 月間予定表
         Me.Text = "月間予定表"
         CType(Me.dgvPlan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents UserListBox As System.Windows.Forms.ListBox
@@ -137,4 +150,5 @@ Partial Class 月間予定表
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnTextClear As System.Windows.Forms.Button
     Friend WithEvents dgvPlan As System.Windows.Forms.DataGridView
+    Friend WithEvents selectUserLabel As System.Windows.Forms.Label
 End Class
