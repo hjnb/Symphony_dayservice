@@ -37,6 +37,8 @@ Partial Class 介護度一覧
         Me.btnTouroku = New System.Windows.Forms.Button()
         Me.btnSakujo = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnKuria = New System.Windows.Forms.Button()
+        Me.btnKousinn = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,9 +46,9 @@ Partial Class 介護度一覧
         '
         Me.lstName.FormattingEnabled = True
         Me.lstName.ItemHeight = 12
-        Me.lstName.Location = New System.Drawing.Point(26, 25)
+        Me.lstName.Location = New System.Drawing.Point(26, 16)
         Me.lstName.Name = "lstName"
-        Me.lstName.Size = New System.Drawing.Size(135, 496)
+        Me.lstName.Size = New System.Drawing.Size(135, 556)
         Me.lstName.TabIndex = 0
         '
         'lblName
@@ -181,17 +183,37 @@ Partial Class 介護度一覧
         Me.DataGridView1.Location = New System.Drawing.Point(214, 226)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 21
-        Me.DataGridView1.Size = New System.Drawing.Size(506, 295)
+        Me.DataGridView1.Size = New System.Drawing.Size(561, 331)
         Me.DataGridView1.TabIndex = 14
+        '
+        'btnKuria
+        '
+        Me.btnKuria.Location = New System.Drawing.Point(474, 31)
+        Me.btnKuria.Name = "btnKuria"
+        Me.btnKuria.Size = New System.Drawing.Size(10, 10)
+        Me.btnKuria.TabIndex = 15
+        Me.btnKuria.Text = "クリア"
+        Me.btnKuria.UseVisualStyleBackColor = True
+        '
+        'btnKousinn
+        '
+        Me.btnKousinn.Location = New System.Drawing.Point(462, 31)
+        Me.btnKousinn.Name = "btnKousinn"
+        Me.btnKousinn.Size = New System.Drawing.Size(10, 10)
+        Me.btnKousinn.TabIndex = 16
+        Me.btnKousinn.Text = "更新"
+        Me.btnKousinn.UseVisualStyleBackColor = True
         '
         '介護度一覧
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(758, 538)
+        Me.ClientSize = New System.Drawing.Size(811, 589)
+        Me.Controls.Add(Me.btnTouroku)
+        Me.Controls.Add(Me.btnKousinn)
+        Me.Controls.Add(Me.btnKuria)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnSakujo)
-        Me.Controls.Add(Me.btnTouroku)
         Me.Controls.Add(Me.chkRiyou)
         Me.Controls.Add(Me.txtBikou)
         Me.Controls.Add(Me.cmbKaigodo)
@@ -226,4 +248,6 @@ Partial Class 介護度一覧
     Friend WithEvents btnTouroku As System.Windows.Forms.Button
     Friend WithEvents btnSakujo As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnKuria As System.Windows.Forms.Button
+    Friend WithEvents btnKousinn As System.Windows.Forms.Button
 End Class

@@ -46,6 +46,10 @@ Public Class 利用者登録
             .RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         End With
 
+        For Each c As DataGridViewColumn In DataGridView1.Columns
+            c.SortMode = DataGridViewColumnSortMode.NotSortable
+        Next c
+
         KeyPreview = True
 
     End Sub
