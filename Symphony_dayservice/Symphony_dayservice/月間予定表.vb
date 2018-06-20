@@ -41,6 +41,9 @@ Public Class 月間予定表
     '表示用データテーブル
     Private dtPlan As DataTable = New DataTable()
 
+    '入力制御用
+    Private inputFlg As Boolean = False
+
     Private Sub 月間予定表_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
 
@@ -157,6 +160,8 @@ Public Class 月間予定表
             .RowTemplate.Height = 14
             .ShowCellToolTips = False
             .DefaultCellStyle.Font = New Font("MS UI Gothic", 6.5)
+            .DefaultCellStyle.SelectionForeColor = Color.Black
+            .ImeMode = Windows.Forms.ImeMode.Hiragana
         End With
     End Sub
 
@@ -285,6 +290,8 @@ Public Class 月間予定表
     End Sub
 
     Private Sub clearDgv()
+        inputFlg = False
+
         '曜日行の文字クリア、計の行クリア
         For i As Integer = 1 To 16
             dgvPlan.Rows(1).Cells("D" & i).Value = ""
@@ -361,6 +368,10 @@ Public Class 月間予定表
         selectUserLabel.Text = ""
         UserListBox.ClearSelected()
 
+        '選択解除
+        dgvPlan.CurrentCell = dgvPlan("Count", 0)
+        dgvPlan.CurrentCell.Selected = False
+
         Dim gyoNum, dayNum As Integer
         Dim nam As String
         Dim reader As System.Data.OleDb.OleDbDataReader
@@ -392,8 +403,7 @@ Public Class 月間予定表
         '計の行の書き込み処理
         writeTotalNum()
 
-        '選択解除
-        dgvPlan.CurrentCell.Selected = False
+        inputFlg = True
     End Sub
 
     Private Sub writeTotalNum()
@@ -424,9 +434,22 @@ Public Class 月間予定表
         Next
     End Sub
 
+    Private Sub dgvPlan_CellEnter(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPlan.CellEnter
+        If inputFlg = True Then
+            dgvPlan.BeginEdit(True)
+        End If
+    End Sub
+
     Private Sub dgvPlan_CellPainting(sender As Object, e As System.Windows.Forms.DataGridViewCellPaintingEventArgs) Handles dgvPlan.CellPainting
         If (e.RowIndex = 28) AndAlso (e.PaintParts And DataGridViewPaintParts.Border) = DataGridViewPaintParts.Border Then
             e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.Inset
+        End If
+
+        If e.ColumnIndex >= 0 AndAlso e.RowIndex >= 0 AndAlso (e.PaintParts And DataGridViewPaintParts.Background) = DataGridViewPaintParts.Background Then
+            e.Graphics.FillRectangle(New SolidBrush(e.CellStyle.BackColor), e.CellBounds)
+            Dim pParts As DataGridViewPaintParts = e.PaintParts And Not DataGridViewPaintParts.Background
+            e.Paint(e.ClipBounds, pParts)
+            e.Handled = True
         End If
     End Sub
 
@@ -460,6 +483,65 @@ Public Class 月間予定表
     Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
         If Not IsNothing(dgvPlan.CurrentCell) AndAlso dgvPlan.CurrentCell.Selected = True AndAlso dgvPlan.CurrentCell.ReadOnly = False Then
             dgvPlan.CurrentCell.Value = selectUserLabel.Text
+        End If
+    End Sub
+
+    Private Sub btnRegist_Click(sender As System.Object, e As System.EventArgs) Handles btnRegist.Click
+
+    End Sub
+
+    Private Sub btnDelete_Click(sender As System.Object, e As System.EventArgs) Handles btnDelete.Click
+        Dim result As DialogResult = MessageBox.Show("本月登録済みのデータを抹消しますか？", "dayservice", MessageBoxButtons.YesNo)
+        If result = Windows.Forms.DialogResult.Yes Then
+            Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
+            Dim SQLCm As OleDbCommand = Cn.CreateCommand
+            SQLCm.CommandText = "delete from PlnM where Ym=@ym"
+            SQLCm.Parameters.Clear()
+            SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ymBox.getADYmStr()
+            Cn.Open()
+            SQLCm.ExecuteNonQuery()
+            Cn.Close()
+
+            'dgvのデータクリア
+            clearDgv()
+
+            '曜日設定
+            setDay(ymBox.getADYmStr())
+
+            'データ表示
+            displayPlan(ymBox.getADYmStr())
+        End If
+    End Sub
+
+    Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
+        'Dim objExcel As Object
+        'Dim objWorkBooks As Object
+        'Dim objWorkBook As Object
+        'Dim oSheet As Object
+
+        'objExcel = CreateObject("Excel.Application")
+        'objWorkBooks = objExcel.Workbooks
+        'objWorkBook = objWorkBooks.Open(TopForm.excelFilePass)
+        'oSheet = objWorkBook.Worksheets("MonthlyUsr2")
+    End Sub
+
+    Private Sub dataGridViewTextBox_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs)
+        Dim tb As TextBox = CType(sender, TextBox)
+        If tb.ImeMode <> Windows.Forms.ImeMode.Hiragana Then
+            e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    Private Sub dgvPlan_EditingControlShowing(sender As Object, e As System.Windows.Forms.DataGridViewEditingControlShowingEventArgs) Handles dgvPlan.EditingControlShowing
+        If TypeOf e.Control Is DataGridViewTextBoxEditingControl Then
+            Dim dgv As DataGridView = CType(sender, DataGridView)
+            Dim tb As DataGridViewTextBoxEditingControl = CType(e.Control, DataGridViewTextBoxEditingControl)
+
+            'イベントハンドラを削除
+            RemoveHandler tb.KeyDown, AddressOf dataGridViewTextBox_KeyDown
+
+            'イベントハンドラを追加
+            AddHandler tb.KeyDown, AddressOf dataGridViewTextBox_KeyDown
         End If
     End Sub
 End Class

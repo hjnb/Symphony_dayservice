@@ -78,6 +78,9 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExDataGridView.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="passwordForm.Designer.vb">
       <DependentUpon>passwordForm.vb</DependentUpon>
     </Compile>

@@ -29,7 +29,7 @@ Partial Class 月間予定表
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnTextClear = New System.Windows.Forms.Button()
-        Me.dgvPlan = New System.Windows.Forms.DataGridView()
+        Me.dgvPlan = New Symphony_dayservice.ExDataGridView()
         Me.selectUserLabel = New System.Windows.Forms.Label()
         CType(Me.dgvPlan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -149,6 +149,6 @@ Partial Class 月間予定表
     Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnTextClear As System.Windows.Forms.Button
-    Friend WithEvents dgvPlan As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvPlan As Symphony_dayservice.ExDataGridView
     Friend WithEvents selectUserLabel As System.Windows.Forms.Label
 End Class
