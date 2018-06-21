@@ -487,7 +487,107 @@ Public Class 月間予定表
     End Sub
 
     Private Sub btnRegist_Click(sender As System.Object, e As System.EventArgs) Handles btnRegist.Click
+        Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
+        Dim SQLCm As OleDbCommand = Cn.CreateCommand
 
+        '該当月のデータ削除
+        SQLCm.CommandText = "delete from PlnM where Ym=@ym"
+        SQLCm.Parameters.Clear()
+        SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ymBox.getADYmStr()
+        Cn.Open()
+        SQLCm.ExecuteNonQuery()
+        Cn.Close()
+
+        'データ登録
+        'Dim adapter As New OleDbDataAdapter()
+        'adapter.InsertCommand = New OleDbCommand("insert into PlnM values (@gyo, @ym, @day, @nam)", Cn)
+        'adapter.InsertCommand.Parameters.Add("@gyo", OleDbType.Integer, 2, "Gyo")
+        'adapter.InsertCommand.Parameters.Add("@ym", OleDbType.Char, 7, "Ym")
+        'adapter.InsertCommand.Parameters.Add("@day", OleDbType.Integer, 2, "Day")
+        'adapter.InsertCommand.Parameters.Add("@nam", OleDbType.Char, 10, "Nam")
+
+        'Dim sw As New Stopwatch()
+
+        'sw.Start()
+        'Dim ym As String = ymBox.getADYmStr()
+        'Dim dt As New DataTable()
+        'dt.Columns.Add("Gyo", Type.GetType("System.Int32"))
+        'dt.Columns.Add("Ym", Type.GetType("System.String"))
+        'dt.Columns.Add("Day", Type.GetType("System.Int32"))
+        'dt.Columns.Add("Nam", Type.GetType("System.String"))
+        'Dim row As DataRow
+        'For i As Integer = 1 To 16
+        '    For j As Integer = 2 To 26
+        '        row = dt.NewRow()
+        '        row("Gyo") = j - 1
+        '        row("Ym") = ym
+        '        row("Day") = i
+        '        row("Nam") = Util.checkDBNullValue(dgvPlan("D" & i, j).Value)
+        '        dt.Rows.Add(row)
+        '    Next
+        'Next
+        'For i As Integer = 1 To 15
+        '    For j As Integer = 30 To 54
+        '        row = dt.NewRow()
+        '        row("Gyo") = j - 1 - 28
+        '        row("Ym") = ym
+        '        row("Day") = i + 16
+        '        row("Nam") = Util.checkDBNullValue(dgvPlan("D" & i, j).Value)
+        '        dt.Rows.Add(row)
+        '    Next
+        'Next
+        'adapter.Update(dt.Select(Nothing, Nothing, DataViewRowState.Added))
+        'sw.Stop()
+        'MsgBox(sw.ElapsedMilliseconds)
+
+
+        '2.8秒くらい
+        'Dim sw As New Stopwatch()
+        'sw.Start()
+        'Dim gyo, day As Integer
+        'Dim nam As String
+        'Dim ym As String = ymBox.getADYmStr()
+        'Cn.Open()
+        'For i As Integer = 1 To 16
+        '    day = i
+        '    For j As Integer = 2 To 26
+        '        gyo = j - 1
+        '        nam = Util.checkDBNullValue(dgvPlan("D" & i, j).Value)
+        '        SQLCm.CommandText = "insert into PlnM values(@gyo, @ym, @day, nam)"
+        '        SQLCm.Parameters.Clear()
+        '        SQLCm.Parameters.Add("@gyo", OleDbType.Integer).Value = gyo
+        '        SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ym
+        '        SQLCm.Parameters.Add("@day", OleDbType.Integer).Value = day
+        '        SQLCm.Parameters.Add("@nam", OleDbType.Char).Value = nam
+        '        SQLCm.ExecuteNonQuery()
+        '    Next
+        'Next
+        'For i As Integer = 1 To 15
+        '    day = i + 16
+        '    For j As Integer = 30 To 54
+        '        gyo = j - 1 - 28
+        '        nam = Util.checkDBNullValue(dgvPlan("D" & i, j).Value)
+        '        SQLCm.CommandText = "insert into PlnM values(@gyo, @ym, @day, nam)"
+        '        SQLCm.Parameters.Clear()
+        '        SQLCm.Parameters.Add("@gyo", OleDbType.Integer).Value = gyo
+        '        SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ym
+        '        SQLCm.Parameters.Add("@day", OleDbType.Integer).Value = day
+        '        SQLCm.Parameters.Add("@nam", OleDbType.Char).Value = nam
+        '        SQLCm.ExecuteNonQuery()
+        '    Next
+        'Next
+        'Cn.Close()
+        'sw.Stop()
+        'MsgBox(sw.ElapsedMilliseconds)
+
+        'dgvのデータクリア
+        clearDgv()
+
+        '曜日設定
+        setDay(ymBox.getADYmStr())
+
+        'データ表示
+        displayPlan(ymBox.getADYmStr())
     End Sub
 
     Private Sub btnDelete_Click(sender As System.Object, e As System.EventArgs) Handles btnDelete.Click
