@@ -44,6 +44,12 @@ Public Class 月間予定表
     '入力制御用
     Private inputFlg As Boolean = False
 
+    '
+    Private NAME_COLUMN_VALUES As Char() = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray
+
+    '
+    Private NAME_COLUMN_VALUES_LENGTH As Integer = NAME_COLUMN_VALUES.Length
+
     Private Sub 月間予定表_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
 
@@ -487,16 +493,16 @@ Public Class 月間予定表
     End Sub
 
     Private Sub btnRegist_Click(sender As System.Object, e As System.EventArgs) Handles btnRegist.Click
-        Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
-        Dim SQLCm As OleDbCommand = Cn.CreateCommand
+        'Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
+        'Dim SQLCm As OleDbCommand = Cn.CreateCommand
 
-        '該当月のデータ削除
-        SQLCm.CommandText = "delete from PlnM where Ym=@ym"
-        SQLCm.Parameters.Clear()
-        SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ymBox.getADYmStr()
-        Cn.Open()
-        SQLCm.ExecuteNonQuery()
-        Cn.Close()
+        ''該当月のデータ削除
+        'SQLCm.CommandText = "delete from PlnM where Ym=@ym"
+        'SQLCm.Parameters.Clear()
+        'SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ymBox.getADYmStr()
+        'Cn.Open()
+        'SQLCm.ExecuteNonQuery()
+        'Cn.Close()
 
         'データ登録
         'Dim adapter As New OleDbDataAdapter()
@@ -614,6 +620,7 @@ Public Class 月間予定表
     End Sub
 
     Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
+        'MsgBox(getColumnAlphabet(27))
         'Dim objExcel As Object
         'Dim objWorkBooks As Object
         'Dim objWorkBook As Object
@@ -644,4 +651,19 @@ Public Class 月間予定表
             AddHandler tb.KeyDown, AddressOf dataGridViewTextBox_KeyDown
         End If
     End Sub
+
+    Private Function getColumnAlphabet(num As Integer) As String
+        'Dim s As String = ""
+        'Dim col As Integer = 0
+        'Do While num > 0
+        '    If col > 0 Then
+        '        num -= 1
+        '    End If
+        '    Dim m As Integer = (num - 1) Mod NAME_COLUMN_VALUES_LENGTH
+        '    s = NAME_COLUMN_VALUES(m) & s
+        '    num = Math.Floor(num / NAME_COLUMN_VALUES_LENGTH)
+        '    col += 1
+        'Loop
+        'Return s
+    End Function
 End Class
