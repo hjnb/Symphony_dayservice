@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Runtime.InteropServices
 
 Public Class 月間予定表
 
@@ -49,6 +50,9 @@ Public Class 月間予定表
 
     '
     Private NAME_COLUMN_VALUES_LENGTH As Integer = NAME_COLUMN_VALUES.Length
+
+    '
+    Private nextEraStr As String = "元号"
 
     Private Sub 月間予定表_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
@@ -586,6 +590,9 @@ Public Class 月間予定表
         'sw.Stop()
         'MsgBox(sw.ElapsedMilliseconds)
 
+
+
+
         'dgvのデータクリア
         clearDgv()
 
@@ -620,16 +627,95 @@ Public Class 月間予定表
     End Sub
 
     Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
-        'MsgBox(getColumnAlphabet(27))
-        'Dim objExcel As Object
-        'Dim objWorkBooks As Object
-        'Dim objWorkBook As Object
-        'Dim oSheet As Object
+        Dim objExcel As Object
+        Dim objWorkBooks As Object
+        Dim objWorkBook As Object
+        Dim oSheet As Object
 
-        'objExcel = CreateObject("Excel.Application")
-        'objWorkBooks = objExcel.Workbooks
-        'objWorkBook = objWorkBooks.Open(TopForm.excelFilePass)
-        'oSheet = objWorkBook.Worksheets("MonthlyUsr2")
+        objExcel = CreateObject("Excel.Application")
+        objWorkBooks = objExcel.Workbooks
+        objWorkBook = objWorkBooks.Open(TopForm.excelFilePass)
+        oSheet = objWorkBook.Worksheets("MonthlyUsr2")
+
+        '書き込み開始セル番号等
+        Dim year As Integer = CInt(ymBox.getADYmStr.Substring(0, 4))
+        Dim month As Integer = CInt(ymBox.getADYmStr.Substring(5, 2))
+        Dim firstDayWeekNum As Integer = New DateTime(year, month, 1).DayOfWeek '最初の曜日の数値
+        Dim lastDayNum As Integer = DateTime.DaysInMonth(year, month) '月の日数
+        Dim cellStrNum As Integer = 1 + 18 * firstDayWeekNum
+        Dim cellRowNum As Integer = 6
+
+        '書き込みデータ取得
+        Dim dataExistsFlg As Boolean = False
+        Dim namList As New List(Of List(Of String))
+        Dim addList As New List(Of String)
+        Dim day As Integer = 1
+        Dim reader As System.Data.OleDb.OleDbDataReader
+        Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
+        Dim SQLCm As OleDbCommand = Cn.CreateCommand
+        SQLCm.CommandText = "select Gyo, Nam, Day from PlnM where Ym=@ym order by Day, Gyo"
+        SQLCm.Parameters.Clear()
+        SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ymBox.getADYmStr()
+        Cn.Open()
+        reader = SQLCm.ExecuteReader()
+        While reader.Read() = True
+            If day = reader("Day") Then
+                addList.Add(Util.checkDBNullValue(reader("Nam")))
+            Else
+                day = reader("Day")
+                namList.Add(addList)
+                addList = New List(Of String)
+                addList.Add(Util.checkDBNullValue(reader("Nam")))
+            End If
+        End While
+        If day <> 1 Then
+            namList.Add(addList)
+            dataExistsFlg = True
+        End If
+        reader.Close()
+        Cn.Close()
+
+        '年月部分書き込み
+        Dim eraStr As String = ymBox.EraText.Substring(0, 1)
+        Dim eraNum As String = CInt(ymBox.EraText.Substring(1, 2)).ToString
+        oSheet.Range("AK1").value = ymBox.getWarekiKanji()
+        oSheet.Range("AS1").value = eraNum
+        oSheet.Range("BC1").value = month
+
+        '書き込み処理
+        For dayNum As Integer = 1 To lastDayNum
+            If dataExistsFlg = True Then
+                writeCalendarCell(dayNum, namList(dayNum - 1), cellStrNum, cellRowNum, oSheet)
+            Else
+                writeCalendarOnlyDateNum(dayNum, cellStrNum, cellRowNum, oSheet)
+            End If
+            cellStrNum += 18
+            If cellStrNum > 109 Then
+                cellStrNum = 1
+                cellRowNum += 9
+            End If
+        Next
+
+        '変更保存確認ダイアログ非表示
+        objExcel.DisplayAlerts = False
+
+        '印刷
+        If TopForm.rbtnPrint.Checked = True Then
+            oSheet.PrintOut()
+        ElseIf TopForm.rbtnPreview.Checked = True Then
+            objExcel.Visible = True
+            oSheet.PrintPreview(1)
+        End If
+
+        ' EXCEL解放
+        objExcel.Quit()
+        Marshal.ReleaseComObject(oSheet)
+        Marshal.ReleaseComObject(objWorkBook)
+        Marshal.ReleaseComObject(objExcel)
+        oSheet = Nothing
+        objWorkBook = Nothing
+        objExcel = Nothing
+
     End Sub
 
     Private Sub dataGridViewTextBox_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs)
@@ -653,17 +739,41 @@ Public Class 月間予定表
     End Sub
 
     Private Function getColumnAlphabet(num As Integer) As String
-        'Dim s As String = ""
-        'Dim col As Integer = 0
-        'Do While num > 0
-        '    If col > 0 Then
-        '        num -= 1
-        '    End If
-        '    Dim m As Integer = (num - 1) Mod NAME_COLUMN_VALUES_LENGTH
-        '    s = NAME_COLUMN_VALUES(m) & s
-        '    num = Math.Floor(num / NAME_COLUMN_VALUES_LENGTH)
-        '    col += 1
-        'Loop
-        'Return s
+        Dim s As String = ""
+        Do While num > 0
+            num -= 1
+            Dim m As Integer = num Mod NAME_COLUMN_VALUES_LENGTH
+            s = NAME_COLUMN_VALUES(m) & s
+            num = Math.Floor(num / NAME_COLUMN_VALUES_LENGTH)
+        Loop
+        Return s
     End Function
+
+    Private Sub writeCalendarCell(dateNum As Integer, namList As List(Of String), startCellStrNum As Integer, startCellRowNum As Integer, oSheet As Object)
+        '日付
+        oSheet.Range(getColumnAlphabet(startCellStrNum) & startCellRowNum).value = dateNum
+
+        '氏名の1列目
+        For i As Integer = 0 To 6
+            oSheet.Range(getColumnAlphabet(startCellStrNum + 1) & (startCellRowNum + 2 + i)).value = namList(i)
+        Next
+
+        '氏名の2列目
+        For i As Integer = 0 To 8
+            oSheet.Range(getColumnAlphabet(startCellStrNum + 7) & (startCellRowNum + i)).value = namList(i + 7)
+        Next
+
+        '氏名の3列目
+        For i As Integer = 0 To 8
+            If i + 16 > namList.Count - 1 Then
+                Exit For
+            End If
+            oSheet.Range(getColumnAlphabet(startCellStrNum + 13) & (startCellRowNum + i)).value = namList(i + 16)
+        Next
+    End Sub
+
+    Private Sub writeCalendarOnlyDateNum(dateNum As Integer, startCellStrNum As Integer, startCellRowNum As Integer, oSheet As Object)
+        '日付のみ書き込み
+        oSheet.Range(getColumnAlphabet(startCellStrNum) & startCellRowNum).value = dateNum
+    End Sub
 End Class
