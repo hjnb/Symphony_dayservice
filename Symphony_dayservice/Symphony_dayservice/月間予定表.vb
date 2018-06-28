@@ -6,38 +6,17 @@ Public Class 月間予定表
     '曜日配列
     Private dayArray() As String = {"日", "月", "火", "水", "木", "金", "土"}
 
-    '土曜日の列のセルスタイル
-    Private saturdayColumnCellStyle As DataGridViewCellStyle
+    'Count列の5,10,15,20,25までのセルスタイル
+    Private count5CellStyle, count10CellStyle, count15CellStyle, count20CellStyle, count25CellStyle As DataGridViewCellStyle
 
-    '日曜日の列のセルスタイル
-    Private sundayColumnCellStyle As DataGridViewCellStyle
+    '土曜日,日曜日の列のセルスタイル
+    Private saturdayColumnCellStyle, sundayColumnCellStyle As DataGridViewCellStyle
 
-    '日にちの行のセルスタイル
-    Private dateRowCellStyle As DataGridViewCellStyle
-
-    '曜日の行のセルスタイル
-    Private dayRowCellStyle As DataGridViewCellStyle
+    '日にちの行,曜日の行,計の行のセルスタイル
+    Private dateRowCellStyle, dayRowCellStyle, totalRowCellStyle As DataGridViewCellStyle
 
     'デフォルトのセルスタイル
     Private defaultCellStyle As DataGridViewCellStyle
-
-    'Count列の5までのセルスタイル
-    Private count5CellStyle As DataGridViewCellStyle
-
-    'Count列の10までのセルスタイル
-    Private count10CellStyle As DataGridViewCellStyle
-
-    'Count列の15までのセルスタイル
-    Private count15CellStyle As DataGridViewCellStyle
-
-    'Count列の20までのセルスタイル
-    Private count20CellStyle As DataGridViewCellStyle
-
-    'Count列の25までのセルスタイル
-    Private count25CellStyle As DataGridViewCellStyle
-
-    '計の行のセルスタイル
-    Private totalRowCellStyle As DataGridViewCellStyle
 
     '表示用データテーブル
     Private dtPlan As DataTable = New DataTable()
@@ -45,12 +24,17 @@ Public Class 月間予定表
     '入力制御用
     Private inputFlg As Boolean = False
 
-    '
+    'アルファベット配列
     Private NAME_COLUMN_VALUES As Char() = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray
 
-    '
+    'アルファベット配列長さ
     Private NAME_COLUMN_VALUES_LENGTH As Integer = NAME_COLUMN_VALUES.Length
-
+    ''' <summary>
+    ''' loadイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub 月間予定表_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
 
@@ -68,6 +52,10 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' セルスタイル作成
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub createCellStyle()
         'デフォルトのセルスタイル
         defaultCellStyle = New DataGridViewCellStyle()
@@ -131,6 +119,10 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' 利用者選択リスト表示
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub displayUserList()
         '背景色の設定
         UserListBox.BackColor = Color.FromKnownColor(KnownColor.Control)
@@ -149,6 +141,10 @@ Public Class 月間予定表
         Cn.Close()
     End Sub
 
+    ''' <summary>
+    ''' dgv設定
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub settingDgvPlan()
         'DoubleBufferedプロパティをTrue
         Util.EnableDoubleBuffering(dgvPlan)
@@ -172,6 +168,10 @@ Public Class 月間予定表
         End With
     End Sub
 
+    ''' <summary>
+    ''' dgv表示後の行、列スタイル設定
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub settingDgvPlanStyle()
         With dgvPlan
             'Count列
@@ -251,6 +251,10 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' dgv初期化処理
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub initDgvPlan()
         'dgv設定
         settingDgvPlan()
@@ -296,6 +300,10 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' dgvデータクリア
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub clearDgv()
         inputFlg = False
 
@@ -321,6 +329,11 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' 対象年月の曜日設定
+    ''' </summary>
+    ''' <param name="ymStr">年月文字列(yyyy/MM)</param>
+    ''' <remarks></remarks>
     Private Sub setDay(ymStr As String)
         Dim year As Integer = CInt(ymStr.Substring(0, 4))
         Dim month As Integer = CInt(ymStr.Substring(5, 2))
@@ -335,12 +348,10 @@ Public Class 月間予定表
             If dayStr = "土" Then
                 For j As Integer = 2 To 26
                     dgvPlan.Rows(j).Cells("D" & i).Style = saturdayColumnCellStyle
-                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
                 Next
             ElseIf dayStr = "日" Then
                 For j As Integer = 2 To 26
                     dgvPlan.Rows(j).Cells("D" & i).Style = sundayColumnCellStyle
-                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
                 Next
             End If
         Next
@@ -351,12 +362,10 @@ Public Class 月間予定表
             If dayStr = "土" Then
                 For j As Integer = 30 To 54
                     dgvPlan.Rows(j).Cells("D" & i).Style = saturdayColumnCellStyle
-                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
                 Next
             ElseIf dayStr = "日" Then
                 For j As Integer = 30 To 54
                     dgvPlan.Rows(j).Cells("D" & i).Style = sundayColumnCellStyle
-                    dgvPlan.Rows(j).Cells("D" & i).ReadOnly = True
                 Next
             End If
         Next
@@ -370,6 +379,11 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' 月間予定表表示
+    ''' </summary>
+    ''' <param name="ymStr">年月文字列(yyyy/MM)</param>
+    ''' <remarks></remarks>
     Private Sub displayPlan(ymStr As String)
         '選択氏名ラベルクリア
         selectUserLabel.Text = ""
@@ -413,6 +427,10 @@ Public Class 月間予定表
         inputFlg = True
     End Sub
 
+    ''' <summary>
+    ''' 計の行書き込み
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub writeTotalNum()
         Dim count As Integer = 0
         '１～１６日の計
@@ -441,12 +459,38 @@ Public Class 月間予定表
         Next
     End Sub
 
+    ''' <summary>
+    ''' dgvセルエンターイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub dgvPlan_CellEnter(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvPlan.CellEnter
         If inputFlg = True Then
             dgvPlan.BeginEdit(True)
         End If
     End Sub
 
+    ''' <summary>
+    ''' dgvセルマウスクリックイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub dgvPlan_CellMouseClick(sender As Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvPlan.CellMouseClick
+        Dim clickedCell As DataGridViewCell = dgvPlan(e.ColumnIndex, e.RowIndex)
+        If clickedCell.ReadOnly = True Then
+            MsgBox("範囲内をクリックして下さい。")
+            Return
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' dgvセルペイントイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub dgvPlan_CellPainting(sender As Object, e As System.Windows.Forms.DataGridViewCellPaintingEventArgs) Handles dgvPlan.CellPainting
         If (e.RowIndex = 28) AndAlso (e.PaintParts And DataGridViewPaintParts.Border) = DataGridViewPaintParts.Border Then
             e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.Inset
@@ -460,6 +504,12 @@ Public Class 月間予定表
         End If
     End Sub
 
+    ''' <summary>
+    ''' 年月ボックステキスト変更イベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub ymBox_YmdTextChange(sender As Object, e As System.EventArgs) Handles ymBox.YmdTextChange
         'dgvのデータクリア
         clearDgv()
@@ -472,6 +522,12 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' テキストクリアボタンクリックイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnTextClear_Click(sender As System.Object, e As System.EventArgs) Handles btnTextClear.Click
         For i As Integer = 2 To 55
             For j As Integer = 1 To 16
@@ -483,16 +539,41 @@ Public Class 月間予定表
         Next
     End Sub
 
+    ''' <summary>
+    ''' 利用者選択リストクリックイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub UserListBox_MouseClick(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles UserListBox.MouseClick
         selectUserLabel.Text = UserListBox.SelectedItem
     End Sub
 
+    ''' <summary>
+    ''' 追加ボタンクリックイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
         If Not IsNothing(dgvPlan.CurrentCell) AndAlso dgvPlan.CurrentCell.Selected = True AndAlso dgvPlan.CurrentCell.ReadOnly = False Then
             dgvPlan.CurrentCell.Value = selectUserLabel.Text
+            Dim columnIndex As Integer = dgvPlan.CurrentCellAddress.X
+            Dim rowIndex As Integer = dgvPlan.CurrentCellAddress.Y
+            If (2 <= rowIndex AndAlso rowIndex <= 25) OrElse (30 <= rowIndex AndAlso rowIndex <= 53) Then
+                dgvPlan.CurrentCell = dgvPlan(columnIndex, rowIndex + 1)
+            End If
+        Else
+            MsgBox("挿入箇所を指定して下さい。")
         End If
     End Sub
 
+    ''' <summary>
+    ''' 登録ボタンクリックイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnRegist_Click(sender As System.Object, e As System.EventArgs) Handles btnRegist.Click
         Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
         Dim SQLCm As OleDbCommand = Cn.CreateCommand
@@ -573,6 +654,12 @@ Public Class 月間予定表
         displayPlan(ymBox.getADYmStr())
     End Sub
 
+    ''' <summary>
+    ''' 削除ボタンクリックイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnDelete_Click(sender As System.Object, e As System.EventArgs) Handles btnDelete.Click
         Dim result As DialogResult = MessageBox.Show("本月登録済みのデータを抹消しますか？", "dayservice", MessageBoxButtons.YesNo)
         If result = Windows.Forms.DialogResult.Yes Then
@@ -596,6 +683,12 @@ Public Class 月間予定表
         End If
     End Sub
 
+    ''' <summary>
+    ''' 印刷ボタンクリックイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
         Dim objExcel As Object
         Dim objWorkBooks As Object
@@ -688,6 +781,12 @@ Public Class 月間予定表
 
     End Sub
 
+    ''' <summary>
+    ''' dgvセル内のテキストボックスkeyDownイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub dataGridViewTextBox_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs)
         Dim tb As TextBox = CType(sender, TextBox)
         If tb.ImeMode <> Windows.Forms.ImeMode.Hiragana Then
@@ -695,6 +794,12 @@ Public Class 月間予定表
         End If
     End Sub
 
+    ''' <summary>
+    ''' dgvセル編集時のイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub dgvPlan_EditingControlShowing(sender As Object, e As System.Windows.Forms.DataGridViewEditingControlShowingEventArgs) Handles dgvPlan.EditingControlShowing
         If TypeOf e.Control Is DataGridViewTextBoxEditingControl Then
             Dim dgv As DataGridView = CType(sender, DataGridView)
@@ -708,6 +813,12 @@ Public Class 月間予定表
         End If
     End Sub
 
+    ''' <summary>
+    ''' エクセル列番号文字列を取得
+    ''' </summary>
+    ''' <param name="num">列番号数値</param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Private Function getColumnAlphabet(num As Integer) As String
         Dim s As String = ""
         Do While num > 0
@@ -719,6 +830,15 @@ Public Class 月間予定表
         Return s
     End Function
 
+    ''' <summary>
+    ''' 対象の日にちのdgvのテキストをエクセルに書き込む
+    ''' </summary>
+    ''' <param name="dateNum">日にち</param>
+    ''' <param name="namList">氏名リスト</param>
+    ''' <param name="startCellStrNum">開始列番号</param>
+    ''' <param name="startCellRowNum">開始行番号</param>
+    ''' <param name="oSheet">エクセルシートオブジェクト</param>
+    ''' <remarks></remarks>
     Private Sub writeCalendarCell(dateNum As Integer, namList As List(Of String), startCellStrNum As Integer, startCellRowNum As Integer, oSheet As Object)
         '日付
         oSheet.Range(getColumnAlphabet(startCellStrNum) & startCellRowNum).value = dateNum
@@ -742,6 +862,14 @@ Public Class 月間予定表
         Next
     End Sub
 
+    ''' <summary>
+    ''' 対象の日にちテキストをエクセルに書き込む
+    ''' </summary>
+    ''' <param name="dateNum">日にち</param>
+    ''' <param name="startCellStrNum">開始列番号</param>
+    ''' <param name="startCellRowNum">開始行番号</param>
+    ''' <param name="oSheet">エクセルシートオブジェクト</param>
+    ''' <remarks></remarks>
     Private Sub writeCalendarOnlyDateNum(dateNum As Integer, startCellStrNum As Integer, startCellRowNum As Integer, oSheet As Object)
         '日付のみ書き込み
         oSheet.Range(getColumnAlphabet(startCellStrNum) & startCellRowNum).value = dateNum
