@@ -556,6 +556,11 @@ Public Class 月間予定表
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
+        If selectUserLabel.Text = "" Then
+            MsgBox("利用者を選択して下さい。")
+            Return
+        End If
+
         If Not IsNothing(dgvPlan.CurrentCell) AndAlso dgvPlan.CurrentCell.Selected = True AndAlso dgvPlan.CurrentCell.ReadOnly = False Then
             dgvPlan.CurrentCell.Value = selectUserLabel.Text
             Dim columnIndex As Integer = dgvPlan.CurrentCellAddress.X
