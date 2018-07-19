@@ -1,4 +1,6 @@
-﻿Public Class TopForm
+﻿Imports System.Data.OleDb
+Imports System.Runtime.InteropServices
+Public Class TopForm
 
     'データベースのパス
     Public dbFilePath As String = My.Application.Info.DirectoryPath & "\dayservice.mdb"
@@ -58,10 +60,20 @@
 
     Private Sub settingTimeLimitList()
         timeLimitList.Items.Clear()
-        'ここに期限切れリスト表示の処理実装
-        '
-        '
-        '
+        Dim Cn As New OleDbConnection(Me.DB_dayservice)
+        Dim SQLCm As OleDbCommand = Cn.CreateCommand
+        Dim Adapter As New OleDbDataAdapter(SQLCm)
+        Dim Table As New DataTable
+
+        Util.EnableDoubleBuffering(DataGridView1)
+
+        SQLCm.CommandText = "SELECT Nam, kai, KikanS, KikanE, Riyo, Kyotaku FROM Kai WHERE KikanE LIKE '%" & timeLimitYmdBox.getADYmStr() & "%' ORDER BY KikanE"
+        Adapter.Fill(Table)
+        DataGridView1.DataSource = Table
+
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            timeLimitList.Items.Add(DataGridView1(0, i).Value & " (" & Strings.Right(DataGridView1(3, i).Value, 5) & ")")
+        Next
     End Sub
 
     Private Sub timeLimitYmdBox_YmdTextChange(sender As Object, e As System.EventArgs) Handles timeLimitYmdBox.YmdTextChange

@@ -32,8 +32,10 @@ Partial Class TopForm
         Me.rbtnPreview = New System.Windows.Forms.RadioButton()
         Me.rbtnPrint = New System.Windows.Forms.RadioButton()
         Me.topPicture = New System.Windows.Forms.PictureBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.topPicture, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnMonthlyPlan
@@ -144,23 +146,35 @@ Partial Class TopForm
         Me.topPicture.TabIndex = 10
         Me.topPicture.TabStop = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(584, 143)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 21
+        Me.DataGridView1.Size = New System.Drawing.Size(10, 10)
+        Me.DataGridView1.TabIndex = 11
+        '
         'TopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(859, 646)
+        Me.Controls.Add(Me.btnKaigo)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.topPicture)
         Me.Controls.Add(Me.rbtnPrint)
         Me.Controls.Add(Me.rbtnPreview)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnUserRegist)
         Me.Controls.Add(Me.btnMeal)
-        Me.Controls.Add(Me.btnKaigo)
         Me.Controls.Add(Me.btnMonthlyPlan)
         Me.Name = "TopForm"
         Me.Text = "デイサービス"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.topPicture, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -175,5 +189,6 @@ Partial Class TopForm
     Friend WithEvents rbtnPrint As System.Windows.Forms.RadioButton
     Friend WithEvents topPicture As System.Windows.Forms.PictureBox
     Friend WithEvents timeLimitYmdBox As ymdBox.ymdBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 
 End Class
