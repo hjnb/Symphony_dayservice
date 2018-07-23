@@ -114,7 +114,7 @@ Partial Class 介護度一覧
         Me.YmdBox1.EraLabelText = "H30"
         Me.YmdBox1.EraText = ""
         Me.YmdBox1.Location = New System.Drawing.Point(292, 80)
-        Me.YmdBox1.MonthLabelText = "06"
+        Me.YmdBox1.MonthLabelText = "07"
         Me.YmdBox1.MonthText = ""
         Me.YmdBox1.Name = "YmdBox1"
         Me.YmdBox1.Size = New System.Drawing.Size(110, 34)
@@ -127,7 +127,7 @@ Partial Class 介護度一覧
         Me.YmdBox2.EraLabelText = "H30"
         Me.YmdBox2.EraText = ""
         Me.YmdBox2.Location = New System.Drawing.Point(442, 80)
-        Me.YmdBox2.MonthLabelText = "06"
+        Me.YmdBox2.MonthLabelText = "07"
         Me.YmdBox2.MonthText = ""
         Me.YmdBox2.Name = "YmdBox2"
         Me.YmdBox2.Size = New System.Drawing.Size(110, 34)
@@ -136,7 +136,8 @@ Partial Class 介護度一覧
         'cmbKaigodo
         '
         Me.cmbKaigodo.FormattingEnabled = True
-        Me.cmbKaigodo.Items.AddRange(New Object() {"要支援１", "要支援２", "ーーーーーー", "要介護１", "要介護２", "要介護３", "要介護４", "要介護５", "（暫定中）"})
+        Me.cmbKaigodo.ImeMode = System.Windows.Forms.ImeMode.Hiragana
+        Me.cmbKaigodo.Items.AddRange(New Object() {"要支援 １", "要支援 ２", "ーーーーーー", "要介護 １", "要介護 ２", "要介護 ３", "要介護 ４", "要介護 ５", "（暫定中）"})
         Me.cmbKaigodo.Location = New System.Drawing.Point(292, 117)
         Me.cmbKaigodo.Name = "cmbKaigodo"
         Me.cmbKaigodo.Size = New System.Drawing.Size(92, 20)
@@ -144,6 +145,7 @@ Partial Class 介護度一覧
         '
         'txtBikou
         '
+        Me.txtBikou.ImeMode = System.Windows.Forms.ImeMode.Hiragana
         Me.txtBikou.Location = New System.Drawing.Point(290, 148)
         Me.txtBikou.Name = "txtBikou"
         Me.txtBikou.Size = New System.Drawing.Size(262, 19)
