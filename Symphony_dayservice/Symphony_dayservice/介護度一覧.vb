@@ -153,6 +153,13 @@ Public Class 介護度一覧
             DataGridView1(3, i).Value = "～"
         Next
 
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            If row.Selected = True Then
+                row.Selected = False
+                Exit For
+            End If
+        Next
+
     End Sub
 
     Private Sub btnKousinn_Click(sender As System.Object, e As System.EventArgs) Handles btnKousinn.Click
@@ -242,12 +249,15 @@ Public Class 介護度一覧
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
             If YmdBox1.getADStr() = DataGridView1(2, i).Value Then
                 Henkou()
+                Riyou()
                 btnKousinn.PerformClick()
                 Exit Sub
             End If
         Next
 
         Tuika()
+        Riyou()
+
         btnKousinn.PerformClick()
 
     End Sub
@@ -295,6 +305,53 @@ Public Class 介護度一覧
         Cn.Dispose()
 
     End Sub
+    Private Sub Riyou()
+        If DataGridView1.Rows.Count >= 1 Then
+            Dim riyo As Integer
+            If chkRiyou.Checked = True Then
+                riyo = 1
+            Else
+                riyo = 0
+            End If
+            If DataGridView1(5, 0).Value <> riyo Then
+                Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
+                Dim SQLCm As OleDbCommand = Cn.CreateCommand
+                Dim nam, kikans, kikane, kai, kyotaku As String
+                'Dim riyo As Integer
+                nam = lblName.Text
+                'If chkRiyou.Checked = True Then
+                '    riyo = 1
+                'ElseIf chkRiyou.Checked = False Then
+                '    riyo = 0
+                'End If
+                Cn.Open()
+                For i As Integer = 0 To DataGridView1.Rows.Count - 1
+                    kikans = Util.checkDBNullValue(DataGridView1(2, i).Value)
+                    kikane = Util.checkDBNullValue(DataGridView1(4, i).Value)
+                    kai = Util.checkDBNullValue(DataGridView1(1, i).Value)
+                    kyotaku = Util.checkDBNullValue(DataGridView1(6, i).Value)
+
+                    Dim SQL As String = ""
+                    SQL = "UPDATE Kai SET "
+                    SQL &= " kikans = '" & kikans & "', "
+                    SQL &= " kikane = '" & kikane & "', "
+                    SQL &= " kai = '" & kai & "', "
+                    SQL &= " riyo = " & riyo & ", "
+                    SQL &= " kyotaku = '" & kyotaku & "' "
+                    SQL &= " WHERE "
+                    SQL &= " Nam = '" & nam & "' AND kikans = '" & kikans & "' "
+
+                    SQLCm.CommandText = SQL
+
+                    SQLCm.ExecuteNonQuery()
+                Next
+
+                Cn.Close()
+                SQLCm.Dispose()
+                Cn.Dispose()
+            End If
+        End If
+    End Sub
 
     Private Sub btnSakujo_Click(sender As System.Object, e As System.EventArgs) Handles btnSakujo.Click
         If lblName.Text = "" Then
@@ -331,6 +388,8 @@ Public Class 介護度一覧
         Cn.Dispose()
 
         btnKousinn.PerformClick()
-        
+
     End Sub
+
+
 End Class
