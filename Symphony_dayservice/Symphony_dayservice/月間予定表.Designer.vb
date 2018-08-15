@@ -29,8 +29,8 @@ Partial Class 月間予定表
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnTextClear = New System.Windows.Forms.Button()
-        Me.dgvPlan = New Symphony_dayservice.ExDataGridView()
         Me.selectUserLabel = New System.Windows.Forms.Label()
+        Me.dgvPlan = New Symphony_dayservice.ExDataGridView()
         CType(Me.dgvPlan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +60,7 @@ Partial Class 月間予定表
         Me.ymBox.EraLabelText = "H30"
         Me.ymBox.EraText = ""
         Me.ymBox.Location = New System.Drawing.Point(416, 6)
-        Me.ymBox.MonthLabelText = "06"
+        Me.ymBox.MonthLabelText = "08"
         Me.ymBox.MonthText = ""
         Me.ymBox.Name = "ymBox"
         Me.ymBox.Size = New System.Drawing.Size(120, 46)
@@ -102,15 +102,6 @@ Partial Class 月間予定表
         Me.btnTextClear.Text = "テキストクリア"
         Me.btnTextClear.UseVisualStyleBackColor = True
         '
-        'dgvPlan
-        '
-        Me.dgvPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPlan.Location = New System.Drawing.Point(240, 66)
-        Me.dgvPlan.Name = "dgvPlan"
-        Me.dgvPlan.RowTemplate.Height = 21
-        Me.dgvPlan.Size = New System.Drawing.Size(1055, 791)
-        Me.dgvPlan.TabIndex = 8
-        '
         'selectUserLabel
         '
         Me.selectUserLabel.AutoSize = True
@@ -120,6 +111,15 @@ Partial Class 月間予定表
         Me.selectUserLabel.Name = "selectUserLabel"
         Me.selectUserLabel.Size = New System.Drawing.Size(0, 27)
         Me.selectUserLabel.TabIndex = 9
+        '
+        'dgvPlan
+        '
+        Me.dgvPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPlan.Location = New System.Drawing.Point(240, 66)
+        Me.dgvPlan.Name = "dgvPlan"
+        Me.dgvPlan.RowTemplate.Height = 21
+        Me.dgvPlan.Size = New System.Drawing.Size(1055, 791)
+        Me.dgvPlan.TabIndex = 8
         '
         '月間予定表
         '
