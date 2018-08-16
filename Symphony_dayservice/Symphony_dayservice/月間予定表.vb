@@ -38,6 +38,14 @@ Public Class 月間予定表
     Private Sub 月間予定表_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
 
+        '現在フォームが存在しているディスプレイを取得
+        Dim s As System.Windows.Forms.Screen = System.Windows.Forms.Screen.FromControl(Me)
+        'ディスプレイの高さと幅を取得
+        Dim h As Integer = s.Bounds.Height
+        If h < 800 Then
+            dgvPlan.Size = New Size(1072, 649)
+        End If
+
         'スタイル定義
         createCellStyle()
 
