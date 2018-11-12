@@ -40,15 +40,15 @@ Partial Class 月間予定表
         Me.UserListBox.ItemHeight = 12
         Me.UserListBox.Location = New System.Drawing.Point(7, 31)
         Me.UserListBox.Name = "UserListBox"
-        Me.UserListBox.Size = New System.Drawing.Size(129, 544)
+        Me.UserListBox.Size = New System.Drawing.Size(103, 544)
         Me.UserListBox.TabIndex = 1
         '
         'btnAdd
         '
         Me.btnAdd.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnAdd.Location = New System.Drawing.Point(150, 131)
+        Me.btnAdd.Location = New System.Drawing.Point(118, 131)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 349)
+        Me.btnAdd.Size = New System.Drawing.Size(67, 349)
         Me.btnAdd.TabIndex = 2
         Me.btnAdd.Text = "追加>>"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -59,8 +59,8 @@ Partial Class 月間予定表
         Me.ymBox.DateText = ""
         Me.ymBox.EraLabelText = "H30"
         Me.ymBox.EraText = ""
-        Me.ymBox.Location = New System.Drawing.Point(416, 6)
-        Me.ymBox.MonthLabelText = "08"
+        Me.ymBox.Location = New System.Drawing.Point(372, 6)
+        Me.ymBox.MonthLabelText = "11"
         Me.ymBox.MonthText = ""
         Me.ymBox.Name = "ymBox"
         Me.ymBox.Size = New System.Drawing.Size(120, 46)
@@ -68,7 +68,7 @@ Partial Class 月間予定表
         '
         'btnRegist
         '
-        Me.btnRegist.Location = New System.Drawing.Point(561, 9)
+        Me.btnRegist.Location = New System.Drawing.Point(517, 9)
         Me.btnRegist.Name = "btnRegist"
         Me.btnRegist.Size = New System.Drawing.Size(75, 40)
         Me.btnRegist.TabIndex = 4
@@ -77,7 +77,7 @@ Partial Class 月間予定表
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(718, 9)
+        Me.btnPrint.Location = New System.Drawing.Point(674, 9)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 40)
         Me.btnPrint.TabIndex = 5
@@ -86,7 +86,7 @@ Partial Class 月間予定表
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(640, 9)
+        Me.btnDelete.Location = New System.Drawing.Point(596, 9)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 40)
         Me.btnDelete.TabIndex = 6
@@ -95,7 +95,7 @@ Partial Class 月間予定表
         '
         'btnTextClear
         '
-        Me.btnTextClear.Location = New System.Drawing.Point(1216, 26)
+        Me.btnTextClear.Location = New System.Drawing.Point(1172, 26)
         Me.btnTextClear.Name = "btnTextClear"
         Me.btnTextClear.Size = New System.Drawing.Size(79, 23)
         Me.btnTextClear.TabIndex = 7
@@ -107,7 +107,7 @@ Partial Class 月間予定表
         Me.selectUserLabel.AutoSize = True
         Me.selectUserLabel.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.selectUserLabel.ForeColor = System.Drawing.Color.Blue
-        Me.selectUserLabel.Location = New System.Drawing.Point(208, 17)
+        Me.selectUserLabel.Location = New System.Drawing.Point(162, 17)
         Me.selectUserLabel.Name = "selectUserLabel"
         Me.selectUserLabel.Size = New System.Drawing.Size(0, 27)
         Me.selectUserLabel.TabIndex = 9
@@ -115,7 +115,7 @@ Partial Class 月間予定表
         'dgvPlan
         '
         Me.dgvPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPlan.Location = New System.Drawing.Point(240, 66)
+        Me.dgvPlan.Location = New System.Drawing.Point(196, 66)
         Me.dgvPlan.Name = "dgvPlan"
         Me.dgvPlan.RowTemplate.Height = 21
         Me.dgvPlan.Size = New System.Drawing.Size(1055, 791)

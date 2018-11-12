@@ -42,7 +42,7 @@ Public Class 月間予定表
         Dim s As System.Windows.Forms.Screen = System.Windows.Forms.Screen.FromControl(Me)
         'ディスプレイの高さと幅を取得
         Dim h As Integer = s.Bounds.Height
-        If h < 800 Then
+        If h < 900 Then
             dgvPlan.Size = New Size(1072, 649)
         End If
 
