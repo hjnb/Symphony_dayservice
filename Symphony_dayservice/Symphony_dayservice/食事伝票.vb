@@ -210,7 +210,7 @@ Public Class 食事伝票
         If Strings.Left(YmdBox1.getWarekiStr(), 1) = "H" Then
             Wareki = "平成"
         Else
-            Wareki = "和暦"
+            Wareki = "令和"
         End If
         Youbi = Strings.Left(WeekdayName(Weekday(YmdBox1.getADStr())), 1)
 
