@@ -48,7 +48,6 @@ Public Class TopForm
         End If
 
         Me.WindowState = FormWindowState.Maximized
-        rbtnPreview.Checked = True
 
         '期限切れリストのymdbox初期値設定(値が変更されるのでYmdTextChangeイベントが動きます)
         timeLimitYmdBox.setADStr(Today.ToString("yyyy/MM/dd"))
@@ -56,6 +55,29 @@ Public Class TopForm
         '画像表示
         topPicture.ImageLocation = imageFilePath
 
+        initPrintState()
+
+    End Sub
+
+    Private Sub initPrintState()
+        Dim state As String = Util.getIniString("System", "Printer", iniFilePath)
+        If state = "Y" Then
+            rbtnPrint.Checked = True
+        Else
+            rbtnPreview.Checked = True
+        End If
+    End Sub
+
+    Private Sub rbtnPreview_CheckedChanged(sender As Object, e As System.EventArgs) Handles rbtnPreview.CheckedChanged
+        If rbtnPreview.Checked = True Then
+            Util.putIniString("System", "Printer", "N", iniFilePath)
+        End If
+    End Sub
+
+    Private Sub rbtnPrint_CheckedChanged(sender As Object, e As System.EventArgs) Handles rbtnPrint.CheckedChanged
+        If rbtnPrint.Checked = True Then
+            Util.putIniString("System", "Printer", "Y", iniFilePath)
+        End If
     End Sub
 
     Private Sub settingTimeLimitList()
