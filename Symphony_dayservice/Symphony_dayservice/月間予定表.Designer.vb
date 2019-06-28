@@ -57,14 +57,15 @@ Partial Class 月間予定表
         '
         Me.ymBox.boxType = 7
         Me.ymBox.DateText = ""
-        Me.ymBox.EraLabelText = "H30"
+        Me.ymBox.EraLabelText = "R01"
         Me.ymBox.EraText = ""
         Me.ymBox.Location = New System.Drawing.Point(372, 6)
-        Me.ymBox.MonthLabelText = "11"
+        Me.ymBox.MonthLabelText = "06"
         Me.ymBox.MonthText = ""
         Me.ymBox.Name = "ymBox"
         Me.ymBox.Size = New System.Drawing.Size(120, 46)
         Me.ymBox.TabIndex = 3
+        Me.ymBox.textReadOnly = False
         '
         'btnRegist
         '
@@ -118,14 +119,14 @@ Partial Class 月間予定表
         Me.dgvPlan.Location = New System.Drawing.Point(196, 66)
         Me.dgvPlan.Name = "dgvPlan"
         Me.dgvPlan.RowTemplate.Height = 21
-        Me.dgvPlan.Size = New System.Drawing.Size(1055, 791)
+        Me.dgvPlan.Size = New System.Drawing.Size(1055, 875)
         Me.dgvPlan.TabIndex = 8
         '
         '月間予定表
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1431, 898)
+        Me.ClientSize = New System.Drawing.Size(1431, 968)
         Me.Controls.Add(Me.selectUserLabel)
         Me.Controls.Add(Me.dgvPlan)
         Me.Controls.Add(Me.btnTextClear)
