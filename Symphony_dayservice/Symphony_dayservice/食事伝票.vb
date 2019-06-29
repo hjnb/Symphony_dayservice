@@ -34,17 +34,17 @@ Public Class 食事伝票
 
     End Sub
 
-    Private Sub textboxEnter(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtName1.KeyPress, txtName2.KeyPress, txtName3.KeyPress, txtName4.KeyPress, txtName5.KeyPress, txtName6.KeyPress, txtName7.KeyPress, txtName8.KeyPress, txtName9.KeyPress, txtName10.KeyPress, txtName11.KeyPress, txtName12.KeyPress, txtName13.KeyPress, txtName14.KeyPress, txtName15.KeyPress, txtName16.KeyPress, txtName17.KeyPress, txtName18.KeyPress, txtName19.KeyPress, txtName20.KeyPress, txtName21.KeyPress, txtName22.KeyPress, txtName23.KeyPress, txtName24.KeyPress, txtName25.KeyPress, txtBikou1.KeyPress, txtBikou2.KeyPress, txtBikou3.KeyPress, txtBikou4.KeyPress, txtBikou5.KeyPress, txtBikou6.KeyPress, txtBikou7.KeyPress, txtBikou8.KeyPress, txtBikou9.KeyPress, txtBikou10.KeyPress, txtBikou11.KeyPress, txtBikou12.KeyPress, txtBikou13.KeyPress, txtBikou14.KeyPress, txtBikou15.KeyPress, txtBikou16.KeyPress, txtBikou17.KeyPress, txtBikou18.KeyPress, txtBikou19.KeyPress, txtBikou20.KeyPress, txtBikou21.KeyPress, txtBikou22.KeyPress, txtBikou23.KeyPress, txtBikou24.KeyPress, txtBikou25.KeyPress
+    Private Sub textboxEnter(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtName1.KeyPress, txtName2.KeyPress, txtName3.KeyPress, txtName4.KeyPress, txtName5.KeyPress, txtName6.KeyPress, txtName7.KeyPress, txtName8.KeyPress, txtName9.KeyPress, txtName10.KeyPress, txtName11.KeyPress, txtName12.KeyPress, txtName13.KeyPress, txtName14.KeyPress, txtName15.KeyPress, txtName16.KeyPress, txtName17.KeyPress, txtName18.KeyPress, txtName19.KeyPress, txtName20.KeyPress, txtName21.KeyPress, txtName22.KeyPress, txtName23.KeyPress, txtName24.KeyPress, txtName25.KeyPress, txtName26.KeyPress, txtName27.KeyPress, txtName28.KeyPress, txtBikou1.KeyPress, txtBikou2.KeyPress, txtBikou3.KeyPress, txtBikou4.KeyPress, txtBikou5.KeyPress, txtBikou6.KeyPress, txtBikou7.KeyPress, txtBikou8.KeyPress, txtBikou9.KeyPress, txtBikou10.KeyPress, txtBikou11.KeyPress, txtBikou12.KeyPress, txtBikou13.KeyPress, txtBikou14.KeyPress, txtBikou15.KeyPress, txtBikou16.KeyPress, txtBikou17.KeyPress, txtBikou18.KeyPress, txtBikou19.KeyPress, txtBikou20.KeyPress, txtBikou21.KeyPress, txtBikou22.KeyPress, txtBikou23.KeyPress, txtBikou24.KeyPress, txtBikou25.KeyPress, txtBikou26.KeyPress, txtBikou27.KeyPress, txtBikou28.KeyPress
         If e.KeyChar = vbCr Then e.Handled = True
     End Sub
 
-    Private Sub YoteiGoukei(sender As System.Object, e As System.EventArgs) Handles cmbYotei1.SelectedIndexChanged, cmbYotei2.SelectedIndexChanged, cmbYotei3.SelectedIndexChanged, cmbYotei4.SelectedIndexChanged, cmbYotei5.SelectedIndexChanged, cmbYotei6.SelectedIndexChanged, cmbYotei7.SelectedIndexChanged, cmbYotei8.SelectedIndexChanged, cmbYotei9.SelectedIndexChanged, cmbYotei10.SelectedIndexChanged, cmbYotei11.SelectedIndexChanged, cmbYotei12.SelectedIndexChanged, cmbYotei13.SelectedIndexChanged, cmbYotei14.SelectedIndexChanged, cmbYotei15.SelectedIndexChanged, cmbYotei16.SelectedIndexChanged, cmbYotei17.SelectedIndexChanged, cmbYotei18.SelectedIndexChanged, cmbYotei19.SelectedIndexChanged, cmbYotei20.SelectedIndexChanged, cmbYotei21.SelectedIndexChanged, cmbYotei22.SelectedIndexChanged, cmbYotei23.SelectedIndexChanged, cmbYotei24.SelectedIndexChanged, cmbYotei25.SelectedIndexChanged
+    Private Sub YoteiGoukei(sender As System.Object, e As System.EventArgs) Handles cmbYotei1.SelectedIndexChanged, cmbYotei2.SelectedIndexChanged, cmbYotei3.SelectedIndexChanged, cmbYotei4.SelectedIndexChanged, cmbYotei5.SelectedIndexChanged, cmbYotei6.SelectedIndexChanged, cmbYotei7.SelectedIndexChanged, cmbYotei8.SelectedIndexChanged, cmbYotei9.SelectedIndexChanged, cmbYotei10.SelectedIndexChanged, cmbYotei11.SelectedIndexChanged, cmbYotei12.SelectedIndexChanged, cmbYotei13.SelectedIndexChanged, cmbYotei14.SelectedIndexChanged, cmbYotei15.SelectedIndexChanged, cmbYotei16.SelectedIndexChanged, cmbYotei17.SelectedIndexChanged, cmbYotei18.SelectedIndexChanged, cmbYotei19.SelectedIndexChanged, cmbYotei20.SelectedIndexChanged, cmbYotei21.SelectedIndexChanged, cmbYotei22.SelectedIndexChanged, cmbYotei23.SelectedIndexChanged, cmbYotei24.SelectedIndexChanged, cmbYotei25.SelectedIndexChanged, cmbYotei26.SelectedIndexChanged, cmbYotei27.SelectedIndexChanged, cmbYotei28.SelectedIndexChanged
         Yoteikei()
     End Sub
     Private Sub Yoteikei()
         Dim YoteiKei As Integer = 0
 
-        For i As Integer = 1 To 25
+        For i As Integer = 1 To 28
             If Controls("cmbYotei" & i).Text = "　　　○　　" Then
                 YoteiKei = YoteiKei + 1
             End If
@@ -52,13 +52,13 @@ Public Class 食事伝票
 
         txtYoteiKei.Text = YoteiKei
     End Sub
-    Private Sub KetteiGoukei(sender As System.Object, e As System.EventArgs) Handles cmbKettei1.SelectedIndexChanged, cmbKettei2.SelectedIndexChanged, cmbKettei3.SelectedIndexChanged, cmbKettei4.SelectedIndexChanged, cmbKettei5.SelectedIndexChanged, cmbKettei6.SelectedIndexChanged, cmbKettei7.SelectedIndexChanged, cmbKettei8.SelectedIndexChanged, cmbKettei9.SelectedIndexChanged, cmbKettei10.SelectedIndexChanged, cmbKettei11.SelectedIndexChanged, cmbKettei12.SelectedIndexChanged, cmbKettei13.SelectedIndexChanged, cmbKettei14.SelectedIndexChanged, cmbKettei15.SelectedIndexChanged, cmbKettei16.SelectedIndexChanged, cmbKettei17.SelectedIndexChanged, cmbKettei18.SelectedIndexChanged, cmbKettei19.SelectedIndexChanged, cmbKettei20.SelectedIndexChanged, cmbKettei21.SelectedIndexChanged, cmbKettei22.SelectedIndexChanged, cmbKettei23.SelectedIndexChanged, cmbKettei24.SelectedIndexChanged, cmbKettei25.SelectedIndexChanged
+    Private Sub KetteiGoukei(sender As System.Object, e As System.EventArgs) Handles cmbKettei1.SelectedIndexChanged, cmbKettei2.SelectedIndexChanged, cmbKettei3.SelectedIndexChanged, cmbKettei4.SelectedIndexChanged, cmbKettei5.SelectedIndexChanged, cmbKettei6.SelectedIndexChanged, cmbKettei7.SelectedIndexChanged, cmbKettei8.SelectedIndexChanged, cmbKettei9.SelectedIndexChanged, cmbKettei10.SelectedIndexChanged, cmbKettei11.SelectedIndexChanged, cmbKettei12.SelectedIndexChanged, cmbKettei13.SelectedIndexChanged, cmbKettei14.SelectedIndexChanged, cmbKettei15.SelectedIndexChanged, cmbKettei16.SelectedIndexChanged, cmbKettei17.SelectedIndexChanged, cmbKettei18.SelectedIndexChanged, cmbKettei19.SelectedIndexChanged, cmbKettei20.SelectedIndexChanged, cmbKettei21.SelectedIndexChanged, cmbKettei22.SelectedIndexChanged, cmbKettei23.SelectedIndexChanged, cmbKettei24.SelectedIndexChanged, cmbKettei25.SelectedIndexChanged, cmbKettei26.SelectedIndexChanged, cmbKettei27.SelectedIndexChanged, cmbKettei28.SelectedIndexChanged
         Ketteikei()
     End Sub
     Private Sub Ketteikei()
         Dim KetteiKei As Integer = 0
 
-        For i As Integer = 1 To 25
+        For i As Integer = 1 To 28
             If Controls("cmbKettei" & i).Text = "　　　○　　" Then
                 KetteiKei = KetteiKei + 1
             End If
@@ -67,7 +67,7 @@ Public Class 食事伝票
         txtKetteikei.Text = KetteiKei
     End Sub
     Private Sub btnKuria_Click(sender As System.Object, e As System.EventArgs) Handles btnKuria.Click
-        For i As Integer = 1 To 25
+        For i As Integer = 1 To 28
             Controls("txtName" & i).Text = ""
             Controls("cmbYotei" & i).Text = ""
             Controls("cmbKettei" & i).Text = ""
@@ -78,9 +78,15 @@ Public Class 食事伝票
     End Sub
 
     Private Sub btnYomikomi_Click(sender As System.Object, e As System.EventArgs) Handles btnYomikomi.Click
-        For i As Integer = 0 To DataGridView2.Rows.Count - 1
+        Dim DGV2rowcount As Integer = DataGridView2.Rows.Count
+        For i As Integer = 0 To DGV2rowcount - 1
             Controls("txtName" & i + 1).Text = Util.checkDBNullValue(DataGridView2(3, i).Value)
+            If Util.checkDBNullValue(DataGridView2(3, i).Value) <> "" Then
+                Controls("cmbYotei" & i + 1).Text = "　　　○　　"
+            End If
         Next
+        Yoteikei()
+        Ketteikei()
     End Sub
 
     Private Sub btnTouroku_Click(sender As System.Object, e As System.EventArgs) Handles btnTouroku.Click
@@ -122,7 +128,7 @@ Public Class 食事伝票
         ymd = YmdBox1.getADStr()
         Cn.Open()
         Dim SQL As String = ""
-        For i As Integer = 1 To 25
+        For i As Integer = 1 To 28
             gyo = i
             If Controls("txtName" & i).Text <> "" Then
                 nam = Controls("txtName" & i).Text
@@ -200,31 +206,33 @@ Public Class 食事伝票
         Dim oSheet As Object
         Dim day As DateTime = DateTime.Today
 
+        Dim cell(27, 8) As String
+        Dim DGV1rowcount As Integer = DataGridView1.Rows.Count
+
+        For row As Integer = 0 To DGV1rowcount - 1
+            For col As Integer = 0 To 8
+                If col = 0 OrElse col = 1 Then
+                    cell(row, col) = Util.checkDBNullValue(DataGridView1(col + 2, row).Value)
+                ElseIf col = 4 Then
+                    cell(row, col) = Util.checkDBNullValue(DataGridView1(col, row).Value)
+                ElseIf col = 8 Then
+                    cell(row, col) = Util.checkDBNullValue(DataGridView1(col - 3, row).Value)
+                End If
+            Next
+        Next
+
         objExcel = CreateObject("Excel.Application")
         objWorkBooks = objExcel.Workbooks
         objWorkBook = objWorkBooks.Open(TopForm.excelFilePass)
         oSheets = objWorkBook.Worksheets
         oSheet = objWorkBook.Worksheets("lunch")
 
-        Dim Wareki, Youbi As String
-        If Strings.Left(YmdBox1.getWarekiStr(), 1) = "H" Then
-            Wareki = "平成"
-        Else
-            Wareki = "令和"
-        End If
+        Dim Youbi As String
         Youbi = Strings.Left(WeekdayName(Weekday(YmdBox1.getADStr())), 1)
 
-        oSheet.Range("B5").Value = Wareki & " " & Strings.Mid(YmdBox1.getWarekiStr(), 2, 2) & " 年 " & Strings.Mid(YmdBox1.getWarekiStr(), 5, 2) & " 月 " & Strings.Right(YmdBox1.getWarekiStr(), 2) & " 日 " & Youbi & " 曜日"
-        oSheet.Range("E33").Value = txtYoteiKei.Text
-
-        Dim countrowDGV1 As Integer = DataGridView1.Rows.Count
-
-        For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            oSheet.Range("C" & i + 7).Value = Util.checkDBNullValue(DataGridView1(2, i).Value)
-            oSheet.Range("D" & i + 7).Value = Util.checkDBNullValue(DataGridView1(3, i).Value)
-            oSheet.Range("G" & i + 7).Value = Util.checkDBNullValue(DataGridView1(4, i).Value)
-            oSheet.Range("K" & i + 7).Value = Util.checkDBNullValue(DataGridView1(5, i).Value)
-        Next
+        oSheet.Range("B5").Value = Util.getKanji(YmdBox1.getWarekiStr()) & " " & Strings.Mid(YmdBox1.getWarekiStr(), 2, 2) & " 年 " & Strings.Mid(YmdBox1.getWarekiStr(), 5, 2) & " 月 " & Strings.Right(YmdBox1.getWarekiStr(), 2) & " 日 " & Youbi & " 曜日"
+        oSheet.Range("E36").Value = txtYoteiKei.Text
+        oSheet.Range("C7", "K34").Value = cell
 
         '保存
         objExcel.DisplayAlerts = False
