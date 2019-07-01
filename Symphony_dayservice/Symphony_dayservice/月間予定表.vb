@@ -1,5 +1,6 @@
 ﻿Imports System.Data.OleDb
 Imports System.Runtime.InteropServices
+Imports Microsoft.Office.Interop
 
 Public Class 月間予定表
 
@@ -715,74 +716,74 @@ Public Class 月間予定表
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
-        Dim objExcel As Object
-        Dim objWorkBooks As Object
-        Dim objWorkBook As Object
-        Dim oSheet As Object
-
-        objExcel = CreateObject("Excel.Application")
-        objWorkBooks = objExcel.Workbooks
-        objWorkBook = objWorkBooks.Open(TopForm.excelFilePass)
-        oSheet = objWorkBook.Worksheets("MonthlyUsr2")
-
-        '書き込み開始セル番号等
+        '
         Dim year As Integer = CInt(ymBox.getADYmStr.Substring(0, 4))
         Dim month As Integer = CInt(ymBox.getADYmStr.Substring(5, 2))
         Dim firstDayWeekNum As Integer = New DateTime(year, month, 1).DayOfWeek '最初の曜日の数値
         Dim lastDayNum As Integer = DateTime.DaysInMonth(year, month) '月の日数
-        Dim cellStrNum As Integer = 1 + 18 * firstDayWeekNum
-        Dim cellRowNum As Integer = 6
 
-        '書き込みデータ取得
-        Dim dataExistsFlg As Boolean = False
-        Dim namList As New List(Of List(Of String))
-        Dim addList As New List(Of String)
-        Dim day As Integer = 1
-        Dim reader As System.Data.OleDb.OleDbDataReader
-        Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
-        Dim SQLCm As OleDbCommand = Cn.CreateCommand
-        SQLCm.CommandText = "select Gyo, Nam, Day from PlnM where Ym=@ym order by Day, Gyo"
-        SQLCm.Parameters.Clear()
-        SQLCm.Parameters.Add("@ym", OleDbType.Char).Value = ymBox.getADYmStr()
-        Cn.Open()
-        reader = SQLCm.ExecuteReader()
-        While reader.Read() = True
-            If day = reader("Day") Then
-                addList.Add(Util.checkDBNullValue(reader("Nam")))
-            Else
-                day = reader("Day")
-                namList.Add(addList)
-                addList = New List(Of String)
-                addList.Add(Util.checkDBNullValue(reader("Nam")))
+        'データ取得
+        Dim dataArray(59, 125) As String
+        Dim baseRowNum As Integer = 0
+        Dim rowIndex As Integer = 0
+        Dim columnIndex As Integer = 0
+        Dim youbiIndex As Integer = firstDayWeekNum - 1
+        Dim tmpDay As Integer = 0
+        Dim cn As New ADODB.Connection()
+        cn.Open(TopForm.DB_dayservice)
+        Dim sql As String = "select Gyo, Nam, Day from PlnM where Ym='" & ymBox.getADYmStr() & "' order by Day, Gyo"
+        Dim rs As New ADODB.Recordset
+        rs.Open(sql, cn, ADODB.CursorTypeEnum.adOpenKeyset, ADODB.LockTypeEnum.adLockOptimistic)
+        While Not rs.EOF
+            Dim day As Integer = Util.checkDBNullValue(rs.Fields("Day").Value)
+            Dim nam As String = Util.checkDBNullValue(rs.Fields("Nam").Value)
+            If tmpDay <> day Then
+                rowIndex = 0
+                tmpDay = day
+                youbiIndex = (youbiIndex + 1) Mod 7
+                columnIndex = youbiIndex * 18
+                If youbiIndex = 0 AndAlso day <> 1 Then
+                    baseRowNum += 10
+                End If
+
+                '日付
+                dataArray(rowIndex + baseRowNum, columnIndex) = day
+
+                rowIndex += 2
+                columnIndex += 1
             End If
+
+            '名前
+            dataArray(rowIndex + baseRowNum, columnIndex) = nam
+
+            rowIndex = (rowIndex + 1) Mod 10
+            If rowIndex = 0 Then
+                columnIndex += 6
+            End If
+            rs.MoveNext()
         End While
-        If day <> 1 Then
-            namList.Add(addList)
-            dataExistsFlg = True
-        End If
-        reader.Close()
-        Cn.Close()
+        rs.Close()
+        cn.Close()
+
+        'エクセル
+        Dim objExcel As Excel.Application = CreateObject("Excel.Application")
+        Dim objWorkBooks As Excel.Workbooks = objExcel.Workbooks
+        Dim objWorkBook As Excel.Workbook = objWorkBooks.Open(TopForm.excelFilePass)
+        Dim oSheet As Excel.Worksheet = objWorkBook.Worksheets("MonthlyUsr2")
+        objExcel.Calculation = Excel.XlCalculation.xlCalculationManual
+        objExcel.ScreenUpdating = False
 
         '年月部分書き込み
-        Dim eraStr As String = ymBox.EraText.Substring(0, 1)
         Dim eraNum As String = CInt(ymBox.EraText.Substring(1, 2)).ToString
-        oSheet.Range("AK1").value = ymBox.getWarekiKanji()
-        oSheet.Range("AS1").value = eraNum
-        oSheet.Range("BC1").value = month
+        oSheet.Range("AK1").Value = ymBox.getWarekiKanji()
+        oSheet.Range("AS1").Value = eraNum
+        oSheet.Range("BC1").Value = month
 
-        '書き込み処理
-        For dayNum As Integer = 1 To lastDayNum
-            If dataExistsFlg = True Then
-                writeCalendarCell(dayNum, namList(dayNum - 1), cellStrNum, cellRowNum, oSheet)
-            Else
-                writeCalendarOnlyDateNum(dayNum, cellStrNum, cellRowNum, oSheet)
-            End If
-            cellStrNum += 18
-            If cellStrNum > 109 Then
-                cellStrNum = 1
-                cellRowNum += 9
-            End If
-        Next
+        'データ書き込み
+        oSheet.Range("A6", "DV65").Value = dataArray
+
+        objExcel.Calculation = Excel.XlCalculation.xlCalculationAutomatic
+        objExcel.ScreenUpdating = True
 
         '変更保存確認ダイアログ非表示
         objExcel.DisplayAlerts = False
