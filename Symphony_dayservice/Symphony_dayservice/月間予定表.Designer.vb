@@ -24,13 +24,13 @@ Partial Class 月間予定表
     Private Sub InitializeComponent()
         Me.UserListBox = New System.Windows.Forms.ListBox()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.ymBox = New ymdBox.ymdBox()
         Me.btnRegist = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnTextClear = New System.Windows.Forms.Button()
         Me.selectUserLabel = New System.Windows.Forms.Label()
         Me.dgvPlan = New Symphony_dayservice.ExDataGridView()
+        Me.YmBox = New ADBox2.ADBox2()
         CType(Me.dgvPlan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,20 +52,6 @@ Partial Class 月間予定表
         Me.btnAdd.TabIndex = 2
         Me.btnAdd.Text = "追加>>"
         Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'ymBox
-        '
-        Me.ymBox.boxType = 7
-        Me.ymBox.DateText = ""
-        Me.ymBox.EraLabelText = "R01"
-        Me.ymBox.EraText = ""
-        Me.ymBox.Location = New System.Drawing.Point(372, 6)
-        Me.ymBox.MonthLabelText = "06"
-        Me.ymBox.MonthText = ""
-        Me.ymBox.Name = "ymBox"
-        Me.ymBox.Size = New System.Drawing.Size(120, 46)
-        Me.ymBox.TabIndex = 3
-        Me.ymBox.textReadOnly = False
         '
         'btnRegist
         '
@@ -122,18 +108,30 @@ Partial Class 月間予定表
         Me.dgvPlan.Size = New System.Drawing.Size(1055, 875)
         Me.dgvPlan.TabIndex = 8
         '
+        'YmBox
+        '
+        Me.YmBox.dateText = ""
+        Me.YmBox.Location = New System.Drawing.Point(391, 7)
+        Me.YmBox.Mode = 32
+        Me.YmBox.monthText = ""
+        Me.YmBox.Name = "YmBox"
+        Me.YmBox.Size = New System.Drawing.Size(110, 46)
+        Me.YmBox.TabIndex = 3
+        Me.YmBox.textReadOnly = False
+        Me.YmBox.yearText = ""
+        '
         '月間予定表
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1431, 968)
+        Me.Controls.Add(Me.YmBox)
         Me.Controls.Add(Me.selectUserLabel)
         Me.Controls.Add(Me.dgvPlan)
         Me.Controls.Add(Me.btnTextClear)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnRegist)
-        Me.Controls.Add(Me.ymBox)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.UserListBox)
         Me.Name = "月間予定表"
@@ -145,11 +143,11 @@ Partial Class 月間予定表
     End Sub
     Friend WithEvents UserListBox As System.Windows.Forms.ListBox
     Friend WithEvents btnAdd As System.Windows.Forms.Button
-    Friend WithEvents ymBox As ymdBox.ymdBox
     Friend WithEvents btnRegist As System.Windows.Forms.Button
     Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnTextClear As System.Windows.Forms.Button
     Friend WithEvents dgvPlan As Symphony_dayservice.ExDataGridView
     Friend WithEvents selectUserLabel As System.Windows.Forms.Label
+    Friend WithEvents YmBox As ADBox2.ADBox2
 End Class

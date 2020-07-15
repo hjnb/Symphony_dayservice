@@ -531,15 +531,15 @@ Public Class 月間予定表
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub ymBox_YmdTextChange(sender As Object, e As System.EventArgs) Handles ymBox.YmdTextChange
+    Private Sub ymBox_YmdTextChange(sender As Object, e As System.EventArgs) Handles YmBox.YmdTextChange
         'dgvのデータクリア
         clearDgv()
 
         '曜日設定
-        setDay(ymBox.getADYmStr())
+        setDay(YmBox.getADymStr())
 
         'データ表示
-        displayPlan(ymBox.getADYmStr())
+        displayPlan(YmBox.getADymStr())
 
     End Sub
 
@@ -774,10 +774,8 @@ Public Class 月間予定表
         objExcel.ScreenUpdating = False
 
         '年月部分書き込み
-        Dim eraNum As String = CInt(ymBox.EraText.Substring(1, 2)).ToString
-        oSheet.Range("AK1").Value = ymBox.getWarekiKanji()
-        oSheet.Range("AS1").Value = eraNum
-        oSheet.Range("BC1").Value = month
+        oSheet.Range("AS1").Value = year.ToString()
+        oSheet.Range("BC1").Value = month.ToString()
 
         'データ書き込み
         oSheet.Range("A6", "DV65").Value = dataArray
