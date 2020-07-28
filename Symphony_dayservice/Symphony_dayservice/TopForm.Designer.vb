@@ -27,12 +27,12 @@ Partial Class TopForm
         Me.btnMeal = New System.Windows.Forms.Button()
         Me.btnUserRegist = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.timeLimitYmdBox = New ymdBox.ymdBox()
         Me.timeLimitList = New System.Windows.Forms.ListBox()
         Me.rbtnPreview = New System.Windows.Forms.RadioButton()
         Me.rbtnPrint = New System.Windows.Forms.RadioButton()
         Me.topPicture = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.timeLimitYmdBox = New ADBox2.ADBox2()
         Me.GroupBox1.SuspendLayout()
         CType(Me.topPicture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,19 +93,6 @@ Partial Class TopForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "期限切れ近し!!"
         '
-        'timeLimitYmdBox
-        '
-        Me.timeLimitYmdBox.boxType = 7
-        Me.timeLimitYmdBox.DateText = ""
-        Me.timeLimitYmdBox.EraLabelText = "H30"
-        Me.timeLimitYmdBox.EraText = ""
-        Me.timeLimitYmdBox.Location = New System.Drawing.Point(26, 15)
-        Me.timeLimitYmdBox.MonthLabelText = "06"
-        Me.timeLimitYmdBox.MonthText = ""
-        Me.timeLimitYmdBox.Name = "timeLimitYmdBox"
-        Me.timeLimitYmdBox.Size = New System.Drawing.Size(120, 46)
-        Me.timeLimitYmdBox.TabIndex = 11
-        '
         'timeLimitList
         '
         Me.timeLimitList.BackColor = System.Drawing.SystemColors.Control
@@ -156,6 +143,18 @@ Partial Class TopForm
         Me.DataGridView1.Size = New System.Drawing.Size(10, 10)
         Me.DataGridView1.TabIndex = 11
         '
+        'timeLimitYmdBox
+        '
+        Me.timeLimitYmdBox.dateText = ""
+        Me.timeLimitYmdBox.Location = New System.Drawing.Point(24, 15)
+        Me.timeLimitYmdBox.Mode = 32
+        Me.timeLimitYmdBox.monthText = ""
+        Me.timeLimitYmdBox.Name = "timeLimitYmdBox"
+        Me.timeLimitYmdBox.Size = New System.Drawing.Size(110, 46)
+        Me.timeLimitYmdBox.TabIndex = 12
+        Me.timeLimitYmdBox.textReadOnly = False
+        Me.timeLimitYmdBox.yearText = ""
+        '
         'TopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -188,7 +187,7 @@ Partial Class TopForm
     Friend WithEvents rbtnPreview As System.Windows.Forms.RadioButton
     Friend WithEvents rbtnPrint As System.Windows.Forms.RadioButton
     Friend WithEvents topPicture As System.Windows.Forms.PictureBox
-    Friend WithEvents timeLimitYmdBox As ymdBox.ymdBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents timeLimitYmdBox As ADBox2.ADBox2
 
 End Class

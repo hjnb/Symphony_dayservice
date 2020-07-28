@@ -94,12 +94,11 @@ Public Class 食事伝票
 
         If rowcount > 0 Then
             Henkou()
-            btnKousinn.PerformClick()
         Else
             Tuika()
-            btnKousinn.PerformClick()
         End If
 
+        btnKousinn.PerformClick()
     End Sub
     Private Sub Henkou()
         Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
@@ -116,7 +115,7 @@ Public Class 食事伝票
         Cn.Dispose()
 
         Tuika()
-        btnKousinn.PerformClick()
+
     End Sub
     Private Sub Tuika()
         Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
@@ -230,7 +229,7 @@ Public Class 食事伝票
         Dim Youbi As String
         Youbi = Strings.Left(WeekdayName(Weekday(YmdBox1.getADStr())), 1)
 
-        oSheet.Range("B5").Value = Util.getKanji(YmdBox1.getWarekiStr()) & " " & Strings.Mid(YmdBox1.getWarekiStr(), 2, 2) & " 年 " & Strings.Mid(YmdBox1.getWarekiStr(), 5, 2) & " 月 " & Strings.Right(YmdBox1.getWarekiStr(), 2) & " 日 " & Youbi & " 曜日"
+        oSheet.Range("B5").Value = Strings.Left(YmdBox1.getADStr(), 4) & " 年 " & Strings.Mid(YmdBox1.getADStr(), 6, 2) & " 月 " & Strings.Right(YmdBox1.getADStr(), 2) & " 日 " & Youbi & " 曜日"
         oSheet.Range("E36").Value = txtYoteiKei.Text
         oSheet.Range("C7", "K34").Value = cell
 
@@ -296,7 +295,6 @@ Public Class 食事伝票
 
         Yoteikei()
         Ketteikei()
-
     End Sub
 
     Private Sub btnKousinn_Click(sender As System.Object, e As System.EventArgs) Handles btnKousinn.Click
@@ -305,8 +303,7 @@ Public Class 食事伝票
         Dim Adapter As New OleDbDataAdapter(SQLCm)
         Dim Table As New DataTable
 
-        Dim ymd As String = YmdBox1.getADStr()
-        SQLCm.CommandText = "SELECT * FROM Lnch WHERE Ymd = '" & ymd & "' ORDER BY Gyo"
+        SQLCm.CommandText = "SELECT * FROM Lnch WHERE Ymd = '" & YmdBox1.getADStr() & "' ORDER BY Gyo"
         Adapter.Fill(Table)
         DataGridView1.DataSource = Table
 
@@ -317,4 +314,6 @@ Public Class 食事伝票
         KeyPreview = True
 
     End Sub
+
+   
 End Class

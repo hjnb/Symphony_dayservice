@@ -6,20 +6,7 @@ Symphony_dayservice
 </name>
 </assembly>
 <members>
-<member name="P:Symphony_dayservice.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:Symphony_dayservice.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:Symphony_dayservice.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="M:Symphony_dayservice.月間予定表.月間予定表_Load(System.Object,System.EventArgs)">
+<member name="M:Symphony_dayservice.月間予定表.月間予定表_Load(System.Object,System.EventArgs)">
 	<summary>
  loadイベント
  </summary>
@@ -235,6 +222,19 @@ Symphony_dayservice
 	<param name="lpFileName">iniファイルパス</param>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="P:Symphony_dayservice.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Symphony_dayservice.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Symphony_dayservice.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
 </member>
 </members>
 </doc>

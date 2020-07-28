@@ -29,8 +29,6 @@ Partial Class 介護度一覧
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.YmdBox1 = New ymdBox.ymdBox()
-        Me.YmdBox2 = New ymdBox.ymdBox()
         Me.cmbKaigodo = New System.Windows.Forms.ComboBox()
         Me.txtBikou = New System.Windows.Forms.TextBox()
         Me.chkRiyou = New System.Windows.Forms.CheckBox()
@@ -39,6 +37,8 @@ Partial Class 介護度一覧
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnKuria = New System.Windows.Forms.Button()
         Me.btnKousinn = New System.Windows.Forms.Button()
+        Me.YmdBoxStart = New ADBox2.ADBox2()
+        Me.YmdBoxEnd = New ADBox2.ADBox2()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -101,44 +101,18 @@ Partial Class 介護度一覧
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(415, 91)
+        Me.Label5.Location = New System.Drawing.Point(420, 91)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(17, 12)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "～"
-        '
-        'YmdBox1
-        '
-        Me.YmdBox1.boxType = 2
-        Me.YmdBox1.DateText = ""
-        Me.YmdBox1.EraLabelText = "H30"
-        Me.YmdBox1.EraText = ""
-        Me.YmdBox1.Location = New System.Drawing.Point(292, 80)
-        Me.YmdBox1.MonthLabelText = "07"
-        Me.YmdBox1.MonthText = ""
-        Me.YmdBox1.Name = "YmdBox1"
-        Me.YmdBox1.Size = New System.Drawing.Size(110, 34)
-        Me.YmdBox1.TabIndex = 7
-        '
-        'YmdBox2
-        '
-        Me.YmdBox2.boxType = 2
-        Me.YmdBox2.DateText = ""
-        Me.YmdBox2.EraLabelText = "H30"
-        Me.YmdBox2.EraText = ""
-        Me.YmdBox2.Location = New System.Drawing.Point(442, 80)
-        Me.YmdBox2.MonthLabelText = "07"
-        Me.YmdBox2.MonthText = ""
-        Me.YmdBox2.Name = "YmdBox2"
-        Me.YmdBox2.Size = New System.Drawing.Size(110, 34)
-        Me.YmdBox2.TabIndex = 8
         '
         'cmbKaigodo
         '
         Me.cmbKaigodo.FormattingEnabled = True
         Me.cmbKaigodo.ImeMode = System.Windows.Forms.ImeMode.Hiragana
         Me.cmbKaigodo.Items.AddRange(New Object() {"要支援 １", "要支援 ２", "ーーーーーー", "要介護 １", "要介護 ２", "要介護 ３", "要介護 ４", "要介護 ５", "（暫定中）"})
-        Me.cmbKaigodo.Location = New System.Drawing.Point(292, 117)
+        Me.cmbKaigodo.Location = New System.Drawing.Point(290, 117)
         Me.cmbKaigodo.Name = "cmbKaigodo"
         Me.cmbKaigodo.Size = New System.Drawing.Size(92, 20)
         Me.cmbKaigodo.TabIndex = 9
@@ -206,11 +180,37 @@ Partial Class 介護度一覧
         Me.btnKousinn.Text = "更新"
         Me.btnKousinn.UseVisualStyleBackColor = True
         '
+        'YmdBoxStart
+        '
+        Me.YmdBoxStart.dateText = ""
+        Me.YmdBoxStart.Location = New System.Drawing.Point(290, 79)
+        Me.YmdBoxStart.Mode = 1
+        Me.YmdBoxStart.monthText = ""
+        Me.YmdBoxStart.Name = "YmdBoxStart"
+        Me.YmdBoxStart.Size = New System.Drawing.Size(125, 32)
+        Me.YmdBoxStart.TabIndex = 17
+        Me.YmdBoxStart.textReadOnly = False
+        Me.YmdBoxStart.yearText = ""
+        '
+        'YmdBoxEnd
+        '
+        Me.YmdBoxEnd.dateText = ""
+        Me.YmdBoxEnd.Location = New System.Drawing.Point(443, 79)
+        Me.YmdBoxEnd.Mode = 1
+        Me.YmdBoxEnd.monthText = ""
+        Me.YmdBoxEnd.Name = "YmdBoxEnd"
+        Me.YmdBoxEnd.Size = New System.Drawing.Size(125, 32)
+        Me.YmdBoxEnd.TabIndex = 18
+        Me.YmdBoxEnd.textReadOnly = False
+        Me.YmdBoxEnd.yearText = ""
+        '
         '介護度一覧
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(811, 589)
+        Me.Controls.Add(Me.YmdBoxEnd)
+        Me.Controls.Add(Me.YmdBoxStart)
         Me.Controls.Add(Me.btnTouroku)
         Me.Controls.Add(Me.btnKousinn)
         Me.Controls.Add(Me.btnKuria)
@@ -219,8 +219,6 @@ Partial Class 介護度一覧
         Me.Controls.Add(Me.chkRiyou)
         Me.Controls.Add(Me.txtBikou)
         Me.Controls.Add(Me.cmbKaigodo)
-        Me.Controls.Add(Me.YmdBox2)
-        Me.Controls.Add(Me.YmdBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -242,8 +240,6 @@ Partial Class 介護度一覧
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents YmdBox1 As ymdBox.ymdBox
-    Friend WithEvents YmdBox2 As ymdBox.ymdBox
     Friend WithEvents cmbKaigodo As System.Windows.Forms.ComboBox
     Friend WithEvents txtBikou As System.Windows.Forms.TextBox
     Friend WithEvents chkRiyou As System.Windows.Forms.CheckBox
@@ -252,4 +248,6 @@ Partial Class 介護度一覧
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents btnKuria As System.Windows.Forms.Button
     Friend WithEvents btnKousinn As System.Windows.Forms.Button
+    Friend WithEvents YmdBoxStart As ADBox2.ADBox2
+    Friend WithEvents YmdBoxEnd As ADBox2.ADBox2
 End Class

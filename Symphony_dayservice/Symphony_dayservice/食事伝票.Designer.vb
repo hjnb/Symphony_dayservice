@@ -22,7 +22,6 @@ Partial Class 食事伝票
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.YmdBox1 = New ymdBox.ymdBox()
         Me.btnYomikomi = New System.Windows.Forms.Button()
         Me.btnTouroku = New System.Windows.Forms.Button()
         Me.btnSakujo = New System.Windows.Forms.Button()
@@ -187,23 +186,10 @@ Partial Class 食事伝票
         Me.cmbYotei2 = New Symphony_dayservice.ReadOnlyComboBox()
         Me.cmbKettei1 = New Symphony_dayservice.ReadOnlyComboBox()
         Me.cmbYotei1 = New Symphony_dayservice.ReadOnlyComboBox()
+        Me.YmdBox1 = New ADBox2.ADBox2()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'YmdBox1
-        '
-        Me.YmdBox1.boxType = 4
-        Me.YmdBox1.DateText = ""
-        Me.YmdBox1.EraLabelText = "R01"
-        Me.YmdBox1.EraText = ""
-        Me.YmdBox1.Location = New System.Drawing.Point(41, 8)
-        Me.YmdBox1.MonthLabelText = "06"
-        Me.YmdBox1.MonthText = ""
-        Me.YmdBox1.Name = "YmdBox1"
-        Me.YmdBox1.Size = New System.Drawing.Size(145, 34)
-        Me.YmdBox1.TabIndex = 0
-        Me.YmdBox1.textReadOnly = False
         '
         'btnYomikomi
         '
@@ -1929,11 +1915,24 @@ Partial Class 食事伝票
         Me.cmbYotei1.Size = New System.Drawing.Size(88, 24)
         Me.cmbYotei1.TabIndex = 101
         '
+        'YmdBox1
+        '
+        Me.YmdBox1.dateText = ""
+        Me.YmdBox1.Location = New System.Drawing.Point(20, 7)
+        Me.YmdBox1.Mode = 0
+        Me.YmdBox1.monthText = ""
+        Me.YmdBox1.Name = "YmdBox1"
+        Me.YmdBox1.Size = New System.Drawing.Size(160, 32)
+        Me.YmdBox1.TabIndex = 554
+        Me.YmdBox1.textReadOnly = False
+        Me.YmdBox1.yearText = ""
+        '
         '食事伝票
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(568, 838)
+        Me.Controls.Add(Me.YmdBox1)
         Me.Controls.Add(Me.txtBikou26)
         Me.Controls.Add(Me.txtBikou27)
         Me.Controls.Add(Me.txtBikou28)
@@ -2098,7 +2097,6 @@ Partial Class 食事伝票
         Me.Controls.Add(Me.btnInnsatu)
         Me.Controls.Add(Me.btnSakujo)
         Me.Controls.Add(Me.btnYomikomi)
-        Me.Controls.Add(Me.YmdBox1)
         Me.Name = "食事伝票"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2106,7 +2104,6 @@ Partial Class 食事伝票
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents YmdBox1 As ymdBox.ymdBox
     Friend WithEvents btnYomikomi As System.Windows.Forms.Button
     Friend WithEvents btnTouroku As System.Windows.Forms.Button
     Friend WithEvents btnSakujo As System.Windows.Forms.Button
@@ -2271,4 +2268,5 @@ Partial Class 食事伝票
     Friend WithEvents cmbYotei26 As Symphony_dayservice.ReadOnlyComboBox
     Friend WithEvents txtName26 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox30 As System.Windows.Forms.TextBox
+    Friend WithEvents YmdBox1 As ADBox2.ADBox2
 End Class

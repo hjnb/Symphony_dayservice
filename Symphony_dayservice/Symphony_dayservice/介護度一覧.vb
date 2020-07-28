@@ -16,8 +16,8 @@ Public Class 介護度一覧
         Me.WindowState = FormWindowState.Maximized
 
         lblName.Text = ""
-        YmdBox1.setADStr(Today.ToString("yyyy/MM/dd"))
-        YmdBox2.setADStr(Today.ToString("yyyy/MM/dd"))
+        YmdBoxStart.setADStr(Today.ToString("yyyy/MM/dd"))
+        YmdBoxEnd.setADStr(Today.ToString("yyyy/MM/dd"))
 
         Dim reader As System.Data.OleDb.OleDbDataReader
         Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
@@ -80,17 +80,21 @@ Public Class 介護度一覧
     End Sub
 
     Private Sub DataGridView1_CellMouseClick(sender As Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
+        Dim dgv1rowcount As Integer = DataGridView1.Rows.Count
+        If dgv1rowcount = 0 Then
+            Return
+        End If
         Dim i As Integer = DataGridView1.CurrentRow.Index
         cmbKaigodo.Text = Util.checkDBNullValue(DataGridView1(1, i).Value)
-        YmdBox1.setADStr(Util.checkDBNullValue(DataGridView1(2, i).Value))
-        YmdBox2.setADStr(Util.checkDBNullValue(DataGridView1(4, i).Value))
+        YmdBoxStart.setADStr(Util.checkDBNullValue(DataGridView1(2, i).Value))
+        YmdBoxEnd.setADStr(Util.checkDBNullValue(DataGridView1(4, i).Value))
         If Util.checkDBNullValue(DataGridView1(5, i).Value) = 1 Then
             chkRiyou.Checked = True
         ElseIf Util.checkDBNullValue(DataGridView1(5, i).Value) <> 1 Then
             chkRiyou.Checked = False
         End If
         txtBikou.Text = Util.checkDBNullValue(DataGridView1(6, i).Value)
-        
+
     End Sub
 
     Private Sub lstName_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles lstName.SelectedIndexChanged
@@ -223,8 +227,8 @@ Public Class 介護度一覧
     End Sub
 
     Private Sub btnKuria_Click(sender As System.Object, e As System.EventArgs) Handles btnKuria.Click
-        YmdBox1.setADStr(Today.ToString("yyyy/MM/dd"))
-        YmdBox2.setADStr(Today.ToString("yyyy/MM/dd"))
+        YmdBoxStart.setADStr(Today.ToString("yyyy/MM/dd"))
+        YmdBoxEnd.setADStr(Today.ToString("yyyy/MM/dd"))
         cmbKaigodo.Text = ""
         txtBikou.Text = ""
         chkRiyou.Checked = False
@@ -236,7 +240,7 @@ Public Class 介護度一覧
             Return
         End If
 
-        If YmdBox1.getADStr() >= YmdBox2.getADStr() Then
+        If YmdBoxStart.getADStr() >= YmdBoxEnd.getADStr() Then
             MsgBox("有効期限が正しくありません。")
             Return
         End If
@@ -247,7 +251,7 @@ Public Class 介護度一覧
         End If
 
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            If YmdBox1.getADStr() = DataGridView1(2, i).Value Then
+            If YmdBoxStart.getADStr() = DataGridView1(2, i).Value Then
                 Henkou()
                 Riyou()
                 btnKousinn.PerformClick()
@@ -265,7 +269,7 @@ Public Class 介護度一覧
         Dim Cn As New OleDbConnection(TopForm.DB_dayservice)
         Dim SQLCm As OleDbCommand = Cn.CreateCommand
         Dim SQL As String = ""
-        SQL = "DELETE FROM Kai WHERE (Nam = '" & lblName.Text & "') AND (KikanS ='" & YmdBox1.getADStr() & "')"
+        SQL = "DELETE FROM Kai WHERE (Nam = '" & lblName.Text & "') AND (KikanS ='" & YmdBoxStart.getADStr() & "')"
         SQLCm.CommandText = SQL
 
         Cn.Open()
@@ -284,8 +288,8 @@ Public Class 介護度一覧
         Dim nam, kikans, kikane, kai, kyotaku As String
         Dim riyo As Integer = 0
         nam = lblName.Text
-        kikans = YmdBox1.getADStr()
-        kikane = YmdBox2.getADStr()
+        kikans = YmdBoxStart.getADStr()
+        kikane = YmdBoxEnd.getADStr()
         kai = cmbKaigodo.Text
         If chkRiyou.Checked = True Then
             riyo = 1
@@ -372,7 +376,7 @@ Public Class 介護度一覧
             End If
         Else
             If MsgBox("削除してよろしいですか？", MsgBoxStyle.YesNo + vbExclamation, "削除確認") = MsgBoxResult.Yes Then
-                SQL = "DELETE FROM Kai WHERE (Nam = '" & lblName.Text & "') AND (KikanS ='" & YmdBox1.getADStr() & "')"
+                SQL = "DELETE FROM Kai WHERE (Nam = '" & lblName.Text & "') AND (KikanS ='" & YmdBoxStart.getADStr() & "')"
             Else
                 Return
             End If
